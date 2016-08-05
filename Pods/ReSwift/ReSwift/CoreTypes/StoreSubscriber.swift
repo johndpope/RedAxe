@@ -1,9 +1,9 @@
 //
 //  StoreSubscriber.swift
-//  RedAxe
+//  ReSwift
 //
-//  Created by Max Vitruk on 8/4/16.
-//  Copyright © 2016 ZealotSystem. All rights reserved.
+//  Created by Benjamin Encz on 12/14/15.
+//  Copyright © 2015 Benjamin Encz. All rights reserved.
 //
 
 import Foundation
@@ -13,8 +13,12 @@ public protocol AnyStoreSubscriber: class {
 }
 
 public protocol StoreSubscriber: AnyStoreSubscriber {
+    #if swift(>=2.2)
     associatedtype StoreSubscriberStateType
-    
+    #else
+    typealias StoreSubscriberStateType
+    #endif
+
     func newState(state: StoreSubscriberStateType)
 }
 

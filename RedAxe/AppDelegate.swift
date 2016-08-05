@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import ReSwift
 
 var mainStore = Store<AppState>(
-    reducer: CounterReducer(),
+    reducer: FirstScreenReducer(),
     state: nil
 )
 

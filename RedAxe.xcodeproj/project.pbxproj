@@ -7,18 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0405AD4B9F210C8EDB2FCF13 /* Pods_RedAxe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15FDB43F477E8DC77614F941 /* Pods_RedAxe.framework */; };
 		922B9F861D53C443004FF1B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922B9F851D53C443004FF1B6 /* AppDelegate.swift */; };
 		922B9F881D53C443004FF1B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922B9F871D53C443004FF1B6 /* ViewController.swift */; };
 		922B9F8B1D53C443004FF1B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922B9F891D53C443004FF1B6 /* Main.storyboard */; };
 		922B9F8D1D53C443004FF1B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922B9F8C1D53C443004FF1B6 /* Assets.xcassets */; };
 		922B9F901D53C443004FF1B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922B9F8E1D53C443004FF1B6 /* LaunchScreen.storyboard */; };
 		922B9F9B1D53C444004FF1B6 /* RedAxeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922B9F9A1D53C444004FF1B6 /* RedAxeTests.swift */; };
-		922B9FA61D53C80D004FF1B6 /* TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922B9FA51D53C80D004FF1B6 /* TypeAlias.swift */; };
-		922B9FA81D53C8CA004FF1B6 /* CoreEngiene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922B9FA71D53C8CA004FF1B6 /* CoreEngiene.swift */; };
-		922B9FAA1D53CB15004FF1B6 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922B9FA91D53CB15004FF1B6 /* Store.swift */; };
-		922B9FAC1D53CD05004FF1B6 /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922B9FAB1D53CD05004FF1B6 /* Disposable.swift */; };
-		922B9FAE1D53D274004FF1B6 /* StoreSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922B9FAD1D53D274004FF1B6 /* StoreSubscriber.swift */; };
-		922B9FB01D53D390004FF1B6 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922B9FAF1D53D390004FF1B6 /* Subscription.swift */; };
+		92E703441D54BF9A00C94D09 /* Reducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E703431D54BF9A00C94D09 /* Reducers.swift */; };
+		92E703461D54E1B900C94D09 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E703451D54E1B900C94D09 /* Network.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15FDB43F477E8DC77614F941 /* Pods_RedAxe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RedAxe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		847AC53C56FACCA7997654E6 /* Pods-RedAxe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedAxe.release.xcconfig"; path = "Pods/Target Support Files/Pods-RedAxe/Pods-RedAxe.release.xcconfig"; sourceTree = "<group>"; };
 		922B9F821D53C443004FF1B6 /* RedAxe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedAxe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		922B9F851D53C443004FF1B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		922B9F871D53C443004FF1B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,12 +41,9 @@
 		922B9F961D53C444004FF1B6 /* RedAxeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedAxeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		922B9F9A1D53C444004FF1B6 /* RedAxeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedAxeTests.swift; sourceTree = "<group>"; };
 		922B9F9C1D53C444004FF1B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		922B9FA51D53C80D004FF1B6 /* TypeAlias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeAlias.swift; sourceTree = "<group>"; };
-		922B9FA71D53C8CA004FF1B6 /* CoreEngiene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreEngiene.swift; sourceTree = "<group>"; };
-		922B9FA91D53CB15004FF1B6 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		922B9FAB1D53CD05004FF1B6 /* Disposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disposable.swift; sourceTree = "<group>"; };
-		922B9FAD1D53D274004FF1B6 /* StoreSubscriber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreSubscriber.swift; sourceTree = "<group>"; };
-		922B9FAF1D53D390004FF1B6 /* Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		92E703431D54BF9A00C94D09 /* Reducers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reducers.swift; sourceTree = "<group>"; };
+		92E703451D54E1B900C94D09 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		E05F37D1643EB73AEFD10B17 /* Pods-RedAxe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedAxe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RedAxe/Pods-RedAxe.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0405AD4B9F210C8EDB2FCF13 /* Pods_RedAxe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +71,8 @@
 				922B9F841D53C443004FF1B6 /* RedAxe */,
 				922B9F991D53C444004FF1B6 /* RedAxeTests */,
 				922B9F831D53C443004FF1B6 /* Products */,
+				B9D2454B3CFBC7E320FB07CF /* Pods */,
+				DBFD5DD84070D976B8BC71E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,18 +88,11 @@
 		922B9F841D53C443004FF1B6 /* RedAxe */ = {
 			isa = PBXGroup;
 			children = (
+				92E703421D54BF8B00C94D09 /* Core */,
 				922B9F851D53C443004FF1B6 /* AppDelegate.swift */,
-				922B9F871D53C443004FF1B6 /* ViewController.swift */,
-				922B9F891D53C443004FF1B6 /* Main.storyboard */,
-				922B9F8C1D53C443004FF1B6 /* Assets.xcassets */,
-				922B9F8E1D53C443004FF1B6 /* LaunchScreen.storyboard */,
-				922B9F911D53C443004FF1B6 /* Info.plist */,
-				922B9FA51D53C80D004FF1B6 /* TypeAlias.swift */,
-				922B9FA71D53C8CA004FF1B6 /* CoreEngiene.swift */,
-				922B9FA91D53CB15004FF1B6 /* Store.swift */,
-				922B9FAB1D53CD05004FF1B6 /* Disposable.swift */,
-				922B9FAD1D53D274004FF1B6 /* StoreSubscriber.swift */,
-				922B9FAF1D53D390004FF1B6 /* Subscription.swift */,
+				92E7033D1D54BB4100C94D09 /* Controllers */,
+				92E7033F1D54BB7D00C94D09 /* Resource */,
+				92E703451D54E1B900C94D09 /* Network.swift */,
 			);
 			path = RedAxe;
 			sourceTree = "<group>";
@@ -114,6 +106,50 @@
 			path = RedAxeTests;
 			sourceTree = "<group>";
 		};
+		92E7033D1D54BB4100C94D09 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				922B9F871D53C443004FF1B6 /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		92E7033F1D54BB7D00C94D09 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				922B9F891D53C443004FF1B6 /* Main.storyboard */,
+				922B9F8C1D53C443004FF1B6 /* Assets.xcassets */,
+				922B9F8E1D53C443004FF1B6 /* LaunchScreen.storyboard */,
+				922B9F911D53C443004FF1B6 /* Info.plist */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		92E703421D54BF8B00C94D09 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				92E703431D54BF9A00C94D09 /* Reducers.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		B9D2454B3CFBC7E320FB07CF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E05F37D1643EB73AEFD10B17 /* Pods-RedAxe.debug.xcconfig */,
+				847AC53C56FACCA7997654E6 /* Pods-RedAxe.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DBFD5DD84070D976B8BC71E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15FDB43F477E8DC77614F941 /* Pods_RedAxe.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -121,9 +157,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 922B9F9F1D53C444004FF1B6 /* Build configuration list for PBXNativeTarget "RedAxe" */;
 			buildPhases = (
+				1055021FED98E7380E1BBDCD /* Check Pods Manifest.lock */,
 				922B9F7E1D53C443004FF1B6 /* Sources */,
 				922B9F7F1D53C443004FF1B6 /* Frameworks */,
 				922B9F801D53C443004FF1B6 /* Resources */,
+				461D40C7611F220042E68992 /* Embed Pods Frameworks */,
+				EB99B2860874D93CF396637D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,19 +249,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1055021FED98E7380E1BBDCD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		461D40C7611F220042E68992 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RedAxe/Pods-RedAxe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB99B2860874D93CF396637D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RedAxe/Pods-RedAxe-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		922B9F7E1D53C443004FF1B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				922B9FAA1D53CB15004FF1B6 /* Store.swift in Sources */,
-				922B9FAC1D53CD05004FF1B6 /* Disposable.swift in Sources */,
-				922B9FB01D53D390004FF1B6 /* Subscription.swift in Sources */,
-				922B9FAE1D53D274004FF1B6 /* StoreSubscriber.swift in Sources */,
-				922B9FA81D53C8CA004FF1B6 /* CoreEngiene.swift in Sources */,
-				922B9FA61D53C80D004FF1B6 /* TypeAlias.swift in Sources */,
 				922B9F881D53C443004FF1B6 /* ViewController.swift in Sources */,
 				922B9F861D53C443004FF1B6 /* AppDelegate.swift in Sources */,
+				92E703461D54E1B900C94D09 /* Network.swift in Sources */,
+				92E703441D54BF9A00C94D09 /* Reducers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +432,7 @@
 		};
 		922B9FA01D53C444004FF1B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E05F37D1643EB73AEFD10B17 /* Pods-RedAxe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RedAxe/Info.plist;
@@ -360,6 +444,7 @@
 		};
 		922B9FA11D53C444004FF1B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 847AC53C56FACCA7997654E6 /* Pods-RedAxe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RedAxe/Info.plist;
@@ -412,6 +497,7 @@
 				922B9FA11D53C444004FF1B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		922B9FA21D53C444004FF1B6 /* Build configuration list for PBXNativeTarget "RedAxeTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +506,7 @@
 				922B9FA41D53C444004FF1B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

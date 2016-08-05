@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import RedAxe
 
 class RedAxeTests: XCTestCase {
     
