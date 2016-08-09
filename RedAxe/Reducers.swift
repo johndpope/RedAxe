@@ -9,7 +9,7 @@
 import ReSwift
 
 struct AppState: StateType {
-    lazy var availableTopics = [Topic]()
+    var availableTopics = [Topic]()
     var statistic = Statistic()
     var activeTopic : Topic?
     var connectionStatus : Int = 0
@@ -22,11 +22,13 @@ struct ActionStatrtUploadHistory: Action {}
 struct ActionDidUploadWithResult: Action { var history : [VoteMessage]? }
 struct ActionDidReceiveVote: Action { var vote : VoteMessage }
 struct ActionDidConnect: Action { var vote : VoteMessage }
+struct ActionStatrtUploadTopic: Action {}
+struct ActionDidUploadWithTopicResult: Action { var topic : [Topic]?}
 
 struct FirstScreenReducer: Reducer {
     
     func handleAction(action: Action, state: AppState?) -> AppState {
-        let state = state ?? AppState()
+        var state = state ?? AppState()
         
         switch action {
         case _ as ActionIncrease:
@@ -35,11 +37,20 @@ struct FirstScreenReducer: Reducer {
             break
         case _ as ActionStatrtUploadHistory:
             break
+        case _ as ActionStatrtUploadTopic:
+            state.loading = true
+            break
         case let action as ActionDidUploadWithResult:
             state.statistic.insertHistory(action.history)
             break
         case let action as ActionDidReceiveVote:
             state.statistic.appendVote(action.vote)
+            break
+        case let action as ActionDidUploadWithTopicResult:
+            if let availTopic = action.topic {
+              state.availableTopics = availTopic
+            }
+            state.loading = false
             break
         default:
             break

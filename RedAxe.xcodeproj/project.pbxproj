@@ -17,6 +17,7 @@
 		922B9F8D1D53C443004FF1B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922B9F8C1D53C443004FF1B6 /* Assets.xcassets */; };
 		922B9F901D53C443004FF1B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922B9F8E1D53C443004FF1B6 /* LaunchScreen.storyboard */; };
 		922B9F9B1D53C444004FF1B6 /* RedAxeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922B9F9A1D53C444004FF1B6 /* RedAxeTests.swift */; };
+		924AAF841D5A837000BE6AC4 /* TopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924AAF831D5A837000BE6AC4 /* TopicCell.swift */; };
 		924F8FC81D59D60C00A87780 /* VoteChanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F8FC71D59D60C00A87780 /* VoteChanelViewController.swift */; };
 		924F8FCC1D59EAE100A87780 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F8FCB1D59EAE100A87780 /* Constants.swift */; };
 		924F8FCF1D59ED5B00A87780 /* VoteMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F8FCE1D59ED5B00A87780 /* VoteMessage.swift */; };
@@ -58,6 +59,7 @@
 		922B9F961D53C444004FF1B6 /* RedAxeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedAxeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		922B9F9A1D53C444004FF1B6 /* RedAxeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedAxeTests.swift; sourceTree = "<group>"; };
 		922B9F9C1D53C444004FF1B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		924AAF831D5A837000BE6AC4 /* TopicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicCell.swift; sourceTree = "<group>"; };
 		924F8FC71D59D60C00A87780 /* VoteChanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoteChanelViewController.swift; sourceTree = "<group>"; };
 		924F8FCB1D59EAE100A87780 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		924F8FCE1D59ED5B00A87780 /* VoteMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoteMessage.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		922B9F841D53C443004FF1B6 /* RedAxe */ = {
 			isa = PBXGroup;
 			children = (
+				924AAF821D5A835F00BE6AC4 /* View */,
 				922261801D5A4B82001614BD /* RedAxe.entitlements */,
 				924F8FDC1D5A0A5600A87780 /* Model */,
 				922B9F851D53C443004FF1B6 /* AppDelegate.swift */,
@@ -137,6 +140,14 @@
 				922B9F9C1D53C444004FF1B6 /* Info.plist */,
 			);
 			path = RedAxeTests;
+			sourceTree = "<group>";
+		};
+		924AAF821D5A835F00BE6AC4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				924AAF831D5A837000BE6AC4 /* TopicCell.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		924F8FCA1D59EABB00A87780 /* Messaging */ = {
@@ -402,6 +413,7 @@
 				92E703461D54E1B900C94D09 /* Network.swift in Sources */,
 				924F8FDE1D5A0A6E00A87780 /* Topic.swift in Sources */,
 				924F8FC81D59D60C00A87780 /* VoteChanelViewController.swift in Sources */,
+				924AAF841D5A837000BE6AC4 /* TopicCell.swift in Sources */,
 				924F8FD91D5A02B100A87780 /* Statistic.swift in Sources */,
 				92E703441D54BF9A00C94D09 /* Reducers.swift in Sources */,
 				924F8FCC1D59EAE100A87780 /* Constants.swift in Sources */,
