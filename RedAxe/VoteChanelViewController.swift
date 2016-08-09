@@ -10,6 +10,7 @@ import UIKit
 import ReSwift
 
 class VoteChanelViewController: UIViewController, StoreSubscriber {
+    
     override func viewWillAppear(animated: Bool) {
         mainStore.subscribe(self)
     }

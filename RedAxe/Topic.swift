@@ -9,6 +9,7 @@
 import Foundation
 
 class Topic {
+    var channel : String?
     var author : String?
     var expireDate : NSDate?
     var status : Int?
