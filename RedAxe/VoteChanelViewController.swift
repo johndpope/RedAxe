@@ -1,15 +1,15 @@
 //
-//  ViewController.swift
+//  ActiveChanelViewController.swift
 //  RedAxe
 //
-//  Created by Max Vitruk on 8/4/16.
+//  Created by Max Vitruk on 8/9/16.
 //  Copyright © 2016 ZealotSystem. All rights reserved.
 //
 
 import UIKit
 import ReSwift
 
-class ViewController: UIViewController, StoreSubscriber {
+class VoteChanelViewController: UIViewController, StoreSubscriber {
     override func viewWillAppear(animated: Bool) {
         mainStore.subscribe(self)
     }
@@ -18,9 +18,12 @@ class ViewController: UIViewController, StoreSubscriber {
         mainStore.unsubscribe(self)
     }
     
-    func newState(state: AppState) {
+    func newState(state: AppState) {}
+
+    
+    @IBAction func voteUp(sender : UIButton){
+    }
+    
+    @IBAction func voteDown(sender : UIButton){
     }
 }
-
-
-

@@ -6,6 +6,8 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target 'RedAxe' do
   pod 'ReSwift'
+  pod "PubNub", "~> 4.1"
+  pod 'ScrollableGraphView'
 end
 
 target 'RedAxeTests' do

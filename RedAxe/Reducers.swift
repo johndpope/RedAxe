@@ -9,49 +9,37 @@
 import ReSwift
 
 struct AppState: StateType {
-    var counter : Int = 0
-    var isEditableField : Bool = false
-    var mainUserName : String = ""
-    var image : UIImage?
+    var statistic = Statistic()
+    var activeTopic : Topic?
+    var connectionStatus : Int = 0
     var loading = false
 }
 
-struct FirstScreenActionIncrease: Action {}
-struct FirstScreenActionDecrease: Action {}
-struct FirstScreenActionDidStatrtUpload: Action {}
-struct FirstScreenActionDidEndUpload: Action {}
-struct FirstScreenActionEditUser: Action {
-    var userName : String
-}
-
-struct FirstScreenActionImage: Action {
-    var image : UIImage
-}
+struct ActionIncrease: Action {}
+struct ActionDecrease: Action {}
+struct ActionStatrtUploadHistory: Action {}
+struct ActionDidUploadWithResult: Action { var history : [VoteMessage]? }
+struct ActionDidReceiveVote: Action { var vote : VoteMessage }
+struct ActionDidConnect: Action { var vote : VoteMessage }
 
 struct FirstScreenReducer: Reducer {
+    
     func handleAction(action: Action, state: AppState?) -> AppState {
-        var state = state ?? AppState()
+        let state = state ?? AppState()
         
         switch action {
-        case _ as FirstScreenActionIncrease:
-            state.counter += 1
-            
-        case _ as FirstScreenActionDecrease:
-            state.counter -= 1
-            
-        case let action as FirstScreenActionEditUser:
-            state.isEditableField = !state.isEditableField
-            state.mainUserName = action.userName
-            
-        case let action as FirstScreenActionImage:
-            state.image = action.image
-            
-        case _ as FirstScreenActionDidStatrtUpload:
-            state.loading = true
-            
-        case _ as FirstScreenActionDidEndUpload:
-            state.loading = false
-            
+        case _ as ActionIncrease:
+            break
+        case _ as ActionDecrease:
+            break
+        case _ as ActionStatrtUploadHistory:
+            break
+        case let action as ActionDidUploadWithResult:
+            state.statistic.insertHistory(action.history)
+            break
+        case let action as ActionDidReceiveVote:
+            state.statistic.appendVote(action.vote)
+            break
         default:
             break
         }
