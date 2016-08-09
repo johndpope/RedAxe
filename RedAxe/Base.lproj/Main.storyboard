@@ -17,7 +17,47 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMR-AM-r04" customClass="RoundedButton" customModule="RedAxe" customModuleProvider="target">
+                                <rect key="frame" x="137" y="547" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="9Nw-wP-FkP"/>
+                                    <constraint firstAttribute="height" constant="100" id="pFZ-YI-aqM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <state key="normal" title="GO">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="voteUp:" destination="HoO-9y-MvL" eventType="touchUpInside" id="5u7-B4-i8s"/>
+                                    <segue destination="R0M-pX-EwI" kind="show" id="Q0M-46-Qkn"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yll-T1-6cx">
+                                <rect key="frame" x="20" y="191" width="335" height="287"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Yll-T1-6cx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="127" id="F25-VH-xmJ"/>
+                            <constraint firstAttribute="bottom" secondItem="AMR-AM-r04" secondAttribute="bottom" constant="20" symbolic="YES" id="US4-Ya-eKf"/>
+                            <constraint firstItem="AMR-AM-r04" firstAttribute="top" secondItem="Yll-T1-6cx" secondAttribute="bottom" constant="69" id="Vt4-cN-N2P"/>
+                            <constraint firstItem="Yll-T1-6cx" firstAttribute="centerX" secondItem="AMR-AM-r04" secondAttribute="centerX" id="bky-px-sdd"/>
+                            <constraint firstItem="AMR-AM-r04" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gX1-i3-79P"/>
+                            <constraint firstItem="Yll-T1-6cx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="q3K-gA-Lec"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nNb-YX-C7a"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -25,6 +65,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1208.5" y="500.5"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="LXj-2S-pEV">
+            <objects>
+                <tableViewController id="R0M-pX-EwI" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="MHV-fb-Kyj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="HkD-mO-5IQ">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HkD-mO-5IQ" id="Rl0-lJ-0ny">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="R0M-pX-EwI" id="hGm-o9-Oya"/>
+                            <outlet property="delegate" destination="R0M-pX-EwI" id="OUj-CO-FNA"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="HoO-9y-MvL" kind="show" id="8FO-AR-yrF"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b2U-Ue-loJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1616.5" y="500.5"/>
         </scene>
         <!--Vote Chanel View Controller-->
         <scene sceneID="jHg-UQ-Nej">
@@ -38,8 +110,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rxv-ZP-LjR">
-                                <rect key="frame" x="0.0" y="64" width="375" height="250"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rxv-ZP-LjR">
+                                <rect key="frame" x="0.0" y="20" width="375" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="SYb-qQ-pbK"/>
                                 </constraints>
@@ -47,8 +119,8 @@
                                     <segue destination="UCg-ku-RFC" kind="embed" id="0wQ-Ko-eyL"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psj-fG-jcH" customClass="RoundedButton" customModule="RedAxe" customModuleProvider="target">
-                                <rect key="frame" x="243" y="371" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psj-fG-jcH" customClass="RoundedButton" customModule="RedAxe" customModuleProvider="target">
+                                <rect key="frame" x="243" y="327" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="8W8-lC-pBE"/>
@@ -73,8 +145,8 @@
                                     <action selector="voteDown:" destination="HoO-9y-MvL" eventType="touchUpInside" id="uGA-Se-Oft"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnc-XR-F5h" customClass="RoundedButton" customModule="RedAxe" customModuleProvider="target">
-                                <rect key="frame" x="32" y="371" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnc-XR-F5h" customClass="RoundedButton" customModule="RedAxe" customModuleProvider="target">
+                                <rect key="frame" x="32" y="327" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="30B-Sg-iAe"/>
@@ -115,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nk6-M5-SIk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1657.5" y="500.5"/>
+            <point key="canvasLocation" x="2029.5" y="506.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dYb-Uy-roz">
@@ -140,6 +212,10 @@
         <scene sceneID="Q48-hA-gCX">
             <objects>
                 <viewController storyboardIdentifier="VoteGraphController" id="UCg-ku-RFC" customClass="VoteGraphController" customModule="RedAxe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iNb-eF-AuI"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Ks-WO-pGA"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1uk-0d-VAZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -148,7 +224,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lhk-jU-hSe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2115.5" y="298"/>
+            <point key="canvasLocation" x="2029.5" y="-8"/>
         </scene>
     </scenes>
 </document>

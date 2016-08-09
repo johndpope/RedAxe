@@ -9,6 +9,7 @@
 import ReSwift
 
 struct AppState: StateType {
+    lazy var availableTopics = [Topic]()
     var statistic = Statistic()
     var activeTopic : Topic?
     var connectionStatus : Int = 0

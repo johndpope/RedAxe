@@ -22,8 +22,10 @@ class VoteChanelViewController: UIViewController, StoreSubscriber {
 
     
     @IBAction func voteUp(sender : UIButton){
+        mainStore.dispatch(ActionIncrease())
     }
     
     @IBAction func voteDown(sender : UIButton){
+        mainStore.dispatch(ActionDecrease())
     }
 }
