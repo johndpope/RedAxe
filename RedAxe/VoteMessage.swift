@@ -8,7 +8,7 @@
 
 import Foundation
 
-class VoteMessage {
+class VoteMassage {
     init(rating : Int, voteUp : Bool){
         self.rating = rating
         self.voteUp = voteUp

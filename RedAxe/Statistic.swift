@@ -10,14 +10,14 @@ import Foundation
 
 typealias StatisticResponce = (Int, Int, Int)
 class Statistic {
-    private var votes = [VoteMessage]()
+    private var votes = [VoteMassage]()
     
-    func appendVote(vote : VoteMessage)-> StatisticResponce {
+    func appendVote(vote : VoteMassage)-> StatisticResponce {
         votes.append(vote)
         return calculate()
     }
     
-    func insertHistory(votes : [VoteMessage]?){
+    func insertHistory(votes : [VoteMassage]?){
         guard let history = votes else {return}
         self.votes.appendContentsOf(history)
     }

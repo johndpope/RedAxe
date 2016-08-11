@@ -293,6 +293,7 @@
 				TargetAttributes = {
 					922B9F811D53C443004FF1B6 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = Y4NQE77REC;
 						SystemCapabilities = {
 							com.apple.iCloud = {
 								enabled = 1;
@@ -547,7 +548,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RedAxe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lemberg.maxvitruk.RedAxe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lemberg.RedAxeDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -563,7 +564,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RedAxe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lemberg.maxvitruk.RedAxe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lemberg.RedAxeDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

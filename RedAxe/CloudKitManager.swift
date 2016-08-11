@@ -72,7 +72,7 @@ class CloudKitManager {
         topic.author = "MaxVitruk"
         topic.channel = "testchennel"
         topic.description = "Test tes test"
-        topic.expireDate = NSDate().dateByAddingTimeInterval(60)
+        topic.expireDate = NSDate().dateByAddingTimeInterval(10)
         topic.status = 0
         var themeList = [Themes]()
         for i in 0...5 {

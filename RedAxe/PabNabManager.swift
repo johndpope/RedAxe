@@ -10,7 +10,7 @@ import UIKit
 import ReSwift
 import PubNub
 
-typealias HistorySesponse = (success : Bool,history : [VoteMessage])
+typealias HistorySesponse = (success : Bool,history : [VoteMassage])
 
 class PabNabManager : NSObject, StoreSubscriber {
     static let shared = PabNabManager()
@@ -29,30 +29,31 @@ class PabNabManager : NSObject, StoreSubscriber {
         
     }
     
-    func sendMessage(toChannel : String, message : VoteMessage){
-        if let jsonMessage = toJSONString(message) {
+    func sendMassage(toChannel : String, massage : VoteMassage){
+        if let jsonMessage = toJSONString(massage) {
             client?.publish(jsonMessage, toChannel: toChannel, withCompletion: { (status) in
-                print(status.debugDescription)
-                print(status.statusCode)
+                if status.statusCode == 200 {
+                    print("Message has been delivered")
+                }
             })
         }
     }
     
     func voteUp(toChannel : String,rating : Int){
-        let voteUp = VoteMessage(rating: rating, voteUp: true)
-        sendMessage(toChannel,message: voteUp)
+        let voteUp = VoteMassage(rating: rating, voteUp: true)
+        sendMassage(toChannel,massage: voteUp)
     }
     
     func voteDown(toChannel : String,rating : Int){
-        let voteDownMesage = VoteMessage(rating: rating, voteUp: false)
-        sendMessage(toChannel,message: voteDownMesage)
+        let voteDownMesage = VoteMassage(rating: rating, voteUp: false)
+        sendMassage(toChannel, massage: voteDownMesage)
     }
     
     func uploadVoteHistory(){
         mainStore.dispatch({ (state, store, actionCreatorCallback) in
             self.client?.historyForChannel(Constants.chanel, start: nil, end: nil, limit: 50, withCompletion: { (result, error) in
                 actionCreatorCallback({ (state, store) -> Action? in
-                    return ActionDidUploadWithResult(history: result?.data.messages as? [VoteMessage])
+                    return ActionDidUploadWithResult(history: result?.data.messages as? [VoteMassage])
                 })
             })
         })
@@ -81,6 +82,12 @@ extension PabNabManager : PNObjectEventListener {
             
             // Message has been received on channel stored in message.data.subscribedChannel.
         }
+        if let strMassage = message.data.message as? String {
+            if let massage = fromJSONString(strMassage) {
+                mainStore.dispatch(ActionUpdateTopicVoteLevel(rating: massage.rating, vote: massage.voteUp))
+            }
+        }
+
         
         print("Received message: \(message.data.message) on channel " +
             "\((message.data.actualChannel ?? message.data.subscribedChannel)!) at " +
@@ -172,18 +179,18 @@ extension PabNabManager : PNObjectEventListener {
 
 
 extension PabNabManager {
-    func toJSONString(message : VoteMessage) -> String? {
-        let voteNum = message.voteUp ? 1 : 0
-        return "\(message.rating)|\(voteNum)"
+    func toJSONString(massage : VoteMassage) -> String? {
+        let voteNum = massage.voteUp ? 1 : 0
+        return "\(massage.rating)|\(voteNum)"
     }
     
-    func fromJSONString(jsonString : String) -> VoteMessage? {
+    func fromJSONString(jsonString : String) -> VoteMassage? {
         let splitStrings = jsonString.componentsSeparatedByString("|")
         if splitStrings.count == 2 {
             let rating = splitStrings[0]
             let voteUp = splitStrings[1] == "1"
             if let _rating = Int(rating) {
-                return VoteMessage(rating: _rating, voteUp: voteUp)
+                return VoteMassage(rating: _rating, voteUp: voteUp)
             }
         }
         return nil
