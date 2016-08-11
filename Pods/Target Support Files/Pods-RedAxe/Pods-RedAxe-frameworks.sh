@@ -88,12 +88,10 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-RedAxe/PubNub.framework"
   install_framework "Pods-RedAxe/ReSwift.framework"
   install_framework "Pods-RedAxe/ScrollableGraphView.framework"
-  install_framework "Pods-RedAxe/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-RedAxe/CocoaLumberjack.framework"
   install_framework "Pods-RedAxe/PubNub.framework"
   install_framework "Pods-RedAxe/ReSwift.framework"
   install_framework "Pods-RedAxe/ScrollableGraphView.framework"
-  install_framework "Pods-RedAxe/SwiftyJSON.framework"
 fi

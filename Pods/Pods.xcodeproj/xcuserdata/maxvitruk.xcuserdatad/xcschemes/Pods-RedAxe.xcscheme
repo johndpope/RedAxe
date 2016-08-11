@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'E77345EA2391F9B10E8631EB'
+               BlueprintIdentifier = '42A2B0E12E8BD7182F604326'
                BlueprintName = 'Pods-RedAxe'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_RedAxe.framework'>
