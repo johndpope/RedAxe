@@ -70,13 +70,13 @@ class VoteChanelViewController: UIViewController, StoreSubscriber {
     }
     
     @IBAction func voteUp(sender : UIButton){
-        //guard readyForVote else {return}
+        guard readyForVote else {return}
         let rating = ratingPicker.selectedRowInComponent(0) + 1
         mainStore.dispatch(ActionIncrease(rating: rating))
     }
     
     @IBAction func voteDown(sender : UIButton){
-        //guard readyForVote else {return}
+        guard readyForVote else {return}
         let rating = ratingPicker.selectedRowInComponent(0) + 1
         mainStore.dispatch(ActionDecrease(rating: rating))
     }
@@ -106,18 +106,16 @@ class VoteChanelViewController: UIViewController, StoreSubscriber {
     
     @objc private func updateTimeLess(){
         if let expDate = activeTopic?.expireDate {
-            switch expDate {
-            case expDate.timeIntervalSinceNow < 1000:
+            print(expDate.timeIntervalSinceNow)
+            
+            if expDate.timeIntervalSinceNow < -360 {
+                closeTopic()
+            }else if expDate.timeIntervalSinceNow < 0{
+                startTopic()
+            }else if expDate.timeIntervalSinceNow < 1000{
                 let seconds = Int(expDate.timeIntervalSinceNow)
                 waitButtonCountdown.setTitle("\(seconds)", forState: .Normal)
-                break
-            case expDate.timeIntervalSinceNow < -360:
-                closeTopic()
-                break
-            case expDate.timeIntervalSinceNow < 0:
-                startTopic()
-                break
-            default:
+            }else{
                 waitingForStartWithTimeUpdates(expDate)
             }
         }
@@ -146,8 +144,8 @@ class VoteChanelViewController: UIViewController, StoreSubscriber {
     }
     
     private func subscribeForVoteAction(){
-//        guard readyForVote else { return }
-//        guard !connectedWithPubNub else { return }
+        guard readyForVote else { return }
+        guard !connectedWithPubNub else { return }
         guard let topicChanel = activeTopic?.channel else {return}
         
         PabNabManager.shared.client?.subscribeToChannels([topicChanel], withPresence: true)
@@ -155,7 +153,7 @@ class VoteChanelViewController: UIViewController, StoreSubscriber {
     
     private func runWaitTimer(){
         //TODO: REMOVE FOR TEST
-        //timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(updateTimeLess), userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(updateTimeLess), userInfo: nil, repeats: true)
     }
     
     private func cancelTimer(){

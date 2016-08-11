@@ -9,7 +9,6 @@
 import UIKit
 import ReSwift
 import PubNub
-import SwiftyJSON
 
 typealias HistorySesponse = (success : Bool,history : [VoteMessage])
 
@@ -33,6 +32,7 @@ class PabNabManager : NSObject, StoreSubscriber {
     func sendMessage(toChannel : String, message : VoteMessage){
         if let jsonMessage = toJSONString(message) {
             client?.publish(jsonMessage, toChannel: toChannel, withCompletion: { (status) in
+                print(status.debugDescription)
                 print(status.statusCode)
             })
         }
@@ -173,22 +173,18 @@ extension PabNabManager : PNObjectEventListener {
 
 extension PabNabManager {
     func toJSONString(message : VoteMessage) -> String? {
-        let json : JSON = ["rating" : message.rating, "voteUp": message.voteUp]
-        return json.string
+        let voteNum = message.voteUp ? 1 : 0
+        return "\(message.rating)|\(voteNum)"
     }
     
     func fromJSONString(jsonString : String) -> VoteMessage? {
-        if let dataFromString = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
-            let json = JSON(data: dataFromString)
-            return voteMEssageFromJSON(json)
-        }
-        
-        return nil
-    }
-    
-    func voteMEssageFromJSON(json : JSON)-> VoteMessage?{
-        if let voteUp = json["voteUp"].bool, let rating = json["rating"].int {
-            return VoteMessage(rating: rating, voteUp: voteUp)
+        let splitStrings = jsonString.componentsSeparatedByString("|")
+        if splitStrings.count == 2 {
+            let rating = splitStrings[0]
+            let voteUp = splitStrings[1] == "1"
+            if let _rating = Int(rating) {
+                return VoteMessage(rating: _rating, voteUp: voteUp)
+            }
         }
         return nil
     }

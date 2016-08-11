@@ -6,6 +6,16 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Page View Controller-->
+        <scene sceneID="t5r-3W-MM0">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="aY4-bH-LvC" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tII-wl-iIQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1208.5" y="-248.5"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -45,11 +55,21 @@
                                     <segue destination="R0M-pX-EwI" kind="show" id="Q0M-46-Qkn"/>
                                 </connections>
                             </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t8l-Bi-Oke">
+                                <rect key="frame" x="-4" y="64" width="383" height="442"/>
+                                <connections>
+                                    <segue destination="aY4-bH-LvC" kind="embed" id="5cC-VN-AlY"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="0.31764705879999999" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="t8l-Bi-Oke" secondAttribute="trailing" constant="-20" id="P5M-p9-bVS"/>
                             <constraint firstAttribute="bottom" secondItem="AMR-AM-r04" secondAttribute="bottom" constant="20" symbolic="YES" id="US4-Ya-eKf"/>
+                            <constraint firstItem="t8l-Bi-Oke" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="XV0-IX-mNi"/>
+                            <constraint firstItem="t8l-Bi-Oke" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="bgt-n2-ZJB"/>
                             <constraint firstItem="AMR-AM-r04" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gX1-i3-79P"/>
+                            <constraint firstItem="AMR-AM-r04" firstAttribute="top" secondItem="t8l-Bi-Oke" secondAttribute="bottom" constant="41" id="yw7-bF-hhZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nNb-YX-C7a"/>
@@ -258,7 +278,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <visualEffectView hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wLb-4i-V6F">
+                            <visualEffectView opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wLb-4i-V6F">
                                 <rect key="frame" x="-4" y="362" width="383" height="305"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hUM-L8-oYs">
                                     <rect key="frame" x="0.0" y="0.0" width="383" height="305"/>
@@ -278,7 +298,7 @@
                                 </view>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDh-MM-qVe" customClass="RoundedButton" customModule="RedAxe" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDh-MM-qVe" customClass="RoundedButton" customModule="RedAxe" customModuleProvider="target">
                                 <rect key="frame" x="138" y="465" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>

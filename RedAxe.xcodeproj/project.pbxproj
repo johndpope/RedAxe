@@ -29,7 +29,6 @@
 		924F8FE01D5A0AF100A87780 /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F8FDF1D5A0AF100A87780 /* Themes.swift */; };
 		925132F21D5C82CA0023B5DC /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925132F11D5C82CA0023B5DC /* CloudKit.framework */; };
 		92E703441D54BF9A00C94D09 /* Reducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E703431D54BF9A00C94D09 /* Reducers.swift */; };
-		92E703461D54E1B900C94D09 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E703451D54E1B900C94D09 /* Network.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +70,6 @@
 		924F8FDF1D5A0AF100A87780 /* Themes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
 		925132F11D5C82CA0023B5DC /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		92E703431D54BF9A00C94D09 /* Reducers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reducers.swift; sourceTree = "<group>"; };
-		92E703451D54E1B900C94D09 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		E05F37D1643EB73AEFD10B17 /* Pods-RedAxe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedAxe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RedAxe/Pods-RedAxe.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,7 +160,6 @@
 			isa = PBXGroup;
 			children = (
 				924F8FD71D5A029800A87780 /* Statistic */,
-				92E703451D54E1B900C94D09 /* Network.swift */,
 				922261831D5A4EEA001614BD /* CloudKitManager.swift */,
 			);
 			name = Service;
@@ -296,7 +293,6 @@
 				TargetAttributes = {
 					922B9F811D53C443004FF1B6 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = Y4NQE77REC;
 						SystemCapabilities = {
 							com.apple.iCloud = {
 								enabled = 1;
@@ -410,7 +406,6 @@
 				924F8FCF1D59ED5B00A87780 /* VoteMessage.swift in Sources */,
 				924F8FD41D59F11B00A87780 /* UIColor.swift in Sources */,
 				924F8FE01D5A0AF100A87780 /* Themes.swift in Sources */,
-				92E703461D54E1B900C94D09 /* Network.swift in Sources */,
 				924F8FDE1D5A0A6E00A87780 /* Topic.swift in Sources */,
 				924F8FC81D59D60C00A87780 /* VoteChanelViewController.swift in Sources */,
 				924AAF841D5A837000BE6AC4 /* TopicCell.swift in Sources */,

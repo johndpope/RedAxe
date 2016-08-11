@@ -43,7 +43,7 @@ class TopicListViewController: UITableViewController, StoreSubscriber {
         guard topic.count == 0 else { return }
         mainStore.dispatch { (state, store, actionCreatorCallback) in
             
-            mainStore.dispatch(ActionStatrtUploadTopic())
+            //mainStore.dispatch(ActionStatrtUploadTopic())
             
             CloudKitManager().fetchTopicList({ (topic) in
                 dispatch_async(dispatch_get_main_queue(), {
