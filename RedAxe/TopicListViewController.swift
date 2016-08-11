@@ -13,6 +13,13 @@ class TopicListViewController: UITableViewController, StoreSubscriber {
     var loadController : UIAlertController?
     var topic = [Topic]()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.estimatedRowHeight = 65.0
+        tableView.rowHeight = UITableViewAutomaticDimension
+    }
+    
     override func viewWillAppear(animated: Bool) {
         mainStore.subscribe(self)
         uploadTopicList()
@@ -34,8 +41,10 @@ class TopicListViewController: UITableViewController, StoreSubscriber {
     }
     func uploadTopicList(){
         guard topic.count == 0 else { return }
-        mainStore.dispatch(ActionStatrtUploadTopic())
         mainStore.dispatch { (state, store, actionCreatorCallback) in
+            
+            mainStore.dispatch(ActionStatrtUploadTopic())
+            
             CloudKitManager().fetchTopicList({ (topic) in
                 dispatch_async(dispatch_get_main_queue(), {
                     actionCreatorCallback({ (state, store) -> Action? in
@@ -70,6 +79,7 @@ class TopicListViewController: UITableViewController, StoreSubscriber {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        mainStore.dispatch(ActionSetActiveTopic(topic: topic[indexPath.row]))
         self.performSegueWithIdentifier("SegueGoVoteController", sender: nil)
     }
     
@@ -79,6 +89,14 @@ class TopicListViewController: UITableViewController, StoreSubscriber {
         let cell = tableView.dequeueReusableCellWithIdentifier("TopicCell") as! TopicCell
         cell.author.text = topic.author
         cell.descriptionLabel.text = topic.description
+        
+        cell.stackView.subviews.forEach({ $0.removeFromSuperview()})
+        for theme in topic.themes! {
+            let label = UILabel()
+            label.textColor = UIColor.whiteColor()
+            label.text = "  •  \(theme.description!)"
+            cell.stackView.addArrangedSubview(label)
+        }
         
         return cell
     }

@@ -10,4 +10,5 @@ import Foundation
 
 struct Constants {
     static let chanel = "vote_chanel"
+    static let secondInDay = Double(86400)
 }

@@ -9,6 +9,7 @@
 import UIKit
 import ReSwift
 import PubNub
+import SwiftyJSON
 
 typealias HistorySesponse = (success : Bool,history : [VoteMessage])
 
@@ -29,20 +30,22 @@ class PabNabManager : NSObject, StoreSubscriber {
         
     }
     
-    func sendMessage(message : VoteMessage){
-        client?.publish(message, toChannel: Constants.chanel, withCompletion: { (status) in
-            print(status.statusCode)
-        })
+    func sendMessage(toChannel : String, message : VoteMessage){
+        if let jsonMessage = toJSONString(message) {
+            client?.publish(jsonMessage, toChannel: toChannel, withCompletion: { (status) in
+                print(status.statusCode)
+            })
+        }
     }
     
-    func voteUp(rating : Int){
+    func voteUp(toChannel : String,rating : Int){
         let voteUp = VoteMessage(rating: rating, voteUp: true)
-        sendMessage(voteUp)
+        sendMessage(toChannel,message: voteUp)
     }
     
-    func voteDown(rating : Int){
+    func voteDown(toChannel : String,rating : Int){
         let voteDownMesage = VoteMessage(rating: rating, voteUp: false)
-        sendMessage(voteDownMesage)
+        sendMessage(toChannel,message: voteDownMesage)
     }
     
     func uploadVoteHistory(){
@@ -53,6 +56,10 @@ class PabNabManager : NSObject, StoreSubscriber {
                 })
             })
         })
+    }
+    
+    func dispatchStoreWithConnection(connection : Bool){
+        mainStore.dispatch(ActionConnectWithPubNub(succes: connection))
     }
     
     deinit{
@@ -113,7 +120,7 @@ extension PabNabManager : PNObjectEventListener {
     func client(client: PubNub, didReceiveStatus status: PNStatus) {
         
         if status.category == .PNUnexpectedDisconnectCategory {
-            
+            dispatchStoreWithConnection(false)
             // This event happens when radio / connectivity is lost.
         }
         else if status.category == .PNConnectedCategory {
@@ -130,11 +137,11 @@ extension PabNabManager : PNObjectEventListener {
                            compressed: false, withCompletion: { (publishStatus) -> Void in
                             
                             if !publishStatus.error {
-                                
+                                self.dispatchStoreWithConnection(true)
                                 // Message successfully published to specified channel.
                             }
                             else {
-                                
+                                self.dispatchStoreWithConnection(false)
                                 /**
                                  Handle message publish error. Check 'category' property to find out
                                  possible reason because of which request did fail.
@@ -147,7 +154,7 @@ extension PabNabManager : PNObjectEventListener {
             })
         }
         else if status.category == .PNReconnectedCategory {
-            
+            dispatchStoreWithConnection(true)
             /**
              Happens as part of our regular operation. This event happens when
              radio / connectivity is lost, then regained.
@@ -160,5 +167,29 @@ extension PabNabManager : PNObjectEventListener {
              encrypt messages and on live data feed it received plain text.
              */
         }
+    }
+}
+
+
+extension PabNabManager {
+    func toJSONString(message : VoteMessage) -> String? {
+        let json : JSON = ["rating" : message.rating, "voteUp": message.voteUp]
+        return json.string
+    }
+    
+    func fromJSONString(jsonString : String) -> VoteMessage? {
+        if let dataFromString = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
+            let json = JSON(data: dataFromString)
+            return voteMEssageFromJSON(json)
+        }
+        
+        return nil
+    }
+    
+    func voteMEssageFromJSON(json : JSON)-> VoteMessage?{
+        if let voteUp = json["voteUp"].bool, let rating = json["rating"].int {
+            return VoteMessage(rating: rating, voteUp: voteUp)
+        }
+        return nil
     }
 }

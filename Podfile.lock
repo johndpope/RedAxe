@@ -14,16 +14,19 @@ PODS:
     - CocoaLumberjack (= 2.3.0)
   - ReSwift (2.0.0)
   - ScrollableGraphView (2.0.0)
+  - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - PubNub (~> 4.1)
   - ReSwift
   - ScrollableGraphView
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
   CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
   PubNub: 7c59158178877fed5004df938cd31d030856f54e
   ReSwift: 7abc536a87955c34bf60de3fd32ce9a02ee3ad87
   ScrollableGraphView: b91f73335220890103a43a33d9fb8d93c547a86d
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0

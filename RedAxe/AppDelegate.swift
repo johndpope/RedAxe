@@ -23,7 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         PabNabManager.shared.setup()
-        PabNabManager.shared.client?.subscribeToChannels([Constants.chanel], withPresence: true)
+        
+        UINavigationBar.appearance().barStyle = UIBarStyle.Black
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().tintColor = UIColor.redColor()
+        UINavigationBar.appearance().barTintColor = UIColor.clearColor()
+        UINavigationBar.appearance().translucent = true
+        
         return true
     }
 

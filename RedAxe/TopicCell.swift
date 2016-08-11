@@ -11,8 +11,5 @@ import UIKit
 class TopicCell: UITableViewCell {
     @IBOutlet weak var author : UILabel!
     @IBOutlet weak var descriptionLabel : UILabel!
-    @IBOutlet weak var rating : UILabel!
-    @IBOutlet weak var votesLevel : UILabel!
-    @IBOutlet weak var votesCount : UILabel!
-    @IBOutlet weak var dayLess : UILabel!
+    @IBOutlet weak var stackView : UIStackView!
 }

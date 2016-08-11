@@ -22,21 +22,22 @@ class CloudKitManager {
                 return
             }
             
-            
-            themeCounter = fetchedRecords.count
             guard fetchedRecords.count > 0 else {
                 print("fetchedRecords.count < 0")
                 return
             }
+            
             let activeRecord = fetchedRecords[0]
             topic.author = activeRecord["author"] as? String
             topic.description = activeRecord["description"] as? String
             topic.expireDate = activeRecord["expireDate"] as? NSDate
             topic.channel = activeRecord["channel"] as? String
-            topic.channel = activeRecord["channel"] as? String
+            topic.status = activeRecord["status"] as? Int
             topic.themes = [Themes]()
             
             let referenceList = activeRecord["themes"] as! [CKReference]
+            
+            themeCounter = referenceList.count
             
             for reference in referenceList {
                 self.publicDB.fetchRecordWithID(reference.recordID) { fetchedPlace, error in
@@ -55,9 +56,12 @@ class CloudKitManager {
                     
                     themeCounter -= 1
                     
+                    print(themeCounter)
                     print("Theme \(fetchedPlace["description"])")
                     
                     if themeCounter <= 0 {
+                        let themes = topic.themes!
+                        topic.themes = themes.sort({$0.id < $1.id})
                        completion(topic)
                     }
                     

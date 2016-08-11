@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0405AD4B9F210C8EDB2FCF13 /* Pods_RedAxe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15FDB43F477E8DC77614F941 /* Pods_RedAxe.framework */; };
-		922261821D5A4B8B001614BD /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922261811D5A4B8B001614BD /* CloudKit.framework */; };
 		922261841D5A4EEA001614BD /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922261831D5A4EEA001614BD /* CloudKitManager.swift */; };
 		922261861D5A5A62001614BD /* TopicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922261851D5A5A62001614BD /* TopicListViewController.swift */; };
 		922B9F861D53C443004FF1B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922B9F851D53C443004FF1B6 /* AppDelegate.swift */; };
@@ -28,6 +27,7 @@
 		924F8FDB1D5A07A100A87780 /* PabNabManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F8FDA1D5A07A100A87780 /* PabNabManager.swift */; };
 		924F8FDE1D5A0A6E00A87780 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F8FDD1D5A0A6E00A87780 /* Topic.swift */; };
 		924F8FE01D5A0AF100A87780 /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F8FDF1D5A0AF100A87780 /* Themes.swift */; };
+		925132F21D5C82CA0023B5DC /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925132F11D5C82CA0023B5DC /* CloudKit.framework */; };
 		92E703441D54BF9A00C94D09 /* Reducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E703431D54BF9A00C94D09 /* Reducers.swift */; };
 		92E703461D54E1B900C94D09 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E703451D54E1B900C94D09 /* Network.swift */; };
 /* End PBXBuildFile section */
@@ -46,7 +46,6 @@
 		15FDB43F477E8DC77614F941 /* Pods_RedAxe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RedAxe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		847AC53C56FACCA7997654E6 /* Pods-RedAxe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedAxe.release.xcconfig"; path = "Pods/Target Support Files/Pods-RedAxe/Pods-RedAxe.release.xcconfig"; sourceTree = "<group>"; };
 		922261801D5A4B82001614BD /* RedAxe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = RedAxe.entitlements; sourceTree = "<group>"; };
-		922261811D5A4B8B001614BD /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		922261831D5A4EEA001614BD /* CloudKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
 		922261851D5A5A62001614BD /* TopicListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicListViewController.swift; sourceTree = "<group>"; };
 		922B9F821D53C443004FF1B6 /* RedAxe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedAxe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +69,7 @@
 		924F8FDA1D5A07A100A87780 /* PabNabManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PabNabManager.swift; sourceTree = "<group>"; };
 		924F8FDD1D5A0A6E00A87780 /* Topic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		924F8FDF1D5A0AF100A87780 /* Themes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
+		925132F11D5C82CA0023B5DC /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		92E703431D54BF9A00C94D09 /* Reducers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reducers.swift; sourceTree = "<group>"; };
 		92E703451D54E1B900C94D09 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		E05F37D1643EB73AEFD10B17 /* Pods-RedAxe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedAxe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RedAxe/Pods-RedAxe.debug.xcconfig"; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0405AD4B9F210C8EDB2FCF13 /* Pods_RedAxe.framework in Frameworks */,
-				922261821D5A4B8B001614BD /* CloudKit.framework in Frameworks */,
+				925132F21D5C82CA0023B5DC /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +122,6 @@
 				922261801D5A4B82001614BD /* RedAxe.entitlements */,
 				924F8FDC1D5A0A5600A87780 /* Model */,
 				922B9F851D53C443004FF1B6 /* AppDelegate.swift */,
-				924F8FD71D5A029800A87780 /* Statistic */,
 				924F8FD21D59F11000A87780 /* Extension */,
 				924F8FCD1D59EBA200A87780 /* Service */,
 				924F8FCA1D59EABB00A87780 /* Messaging */,
@@ -162,6 +161,7 @@
 		924F8FCD1D59EBA200A87780 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				924F8FD71D5A029800A87780 /* Statistic */,
 				92E703451D54E1B900C94D09 /* Network.swift */,
 				922261831D5A4EEA001614BD /* CloudKitManager.swift */,
 			);
@@ -199,9 +199,9 @@
 			isa = PBXGroup;
 			children = (
 				922B9F871D53C443004FF1B6 /* ViewController.swift */,
-				924F8FC71D59D60C00A87780 /* VoteChanelViewController.swift */,
 				924F8FD01D59EEF500A87780 /* VoteController.swift */,
 				922261851D5A5A62001614BD /* TopicListViewController.swift */,
+				924F8FC71D59D60C00A87780 /* VoteChanelViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -237,7 +237,7 @@
 		DBFD5DD84070D976B8BC71E1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				922261811D5A4B8B001614BD /* CloudKit.framework */,
+				925132F11D5C82CA0023B5DC /* CloudKit.framework */,
 				15FDB43F477E8DC77614F941 /* Pods_RedAxe.framework */,
 			);
 			name = Frameworks;
@@ -552,7 +552,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RedAxe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lemberg.RedAxeDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lemberg.maxvitruk.RedAxe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -568,7 +568,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RedAxe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lemberg.RedAxeDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lemberg.maxvitruk.RedAxe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

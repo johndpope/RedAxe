@@ -8,6 +8,7 @@ target 'RedAxe' do
   pod 'ReSwift'
   pod "PubNub", "~> 4.1"
   pod 'ScrollableGraphView'
+  pod 'SwiftyJSON'
 end
 
 target 'RedAxeTests' do
