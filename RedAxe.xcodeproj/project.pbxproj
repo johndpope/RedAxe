@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0405AD4B9F210C8EDB2FCF13 /* Pods_RedAxe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15FDB43F477E8DC77614F941 /* Pods_RedAxe.framework */; };
+		921BB42D1D65CB5C00C626C7 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921BB42C1D65CB5C00C626C7 /* CircleView.swift */; };
 		922261841D5A4EEA001614BD /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922261831D5A4EEA001614BD /* CloudKitManager.swift */; };
 		922261861D5A5A62001614BD /* TopicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922261851D5A5A62001614BD /* TopicListViewController.swift */; };
 		922B9F861D53C443004FF1B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922B9F851D53C443004FF1B6 /* AppDelegate.swift */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		15FDB43F477E8DC77614F941 /* Pods_RedAxe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RedAxe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		847AC53C56FACCA7997654E6 /* Pods-RedAxe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedAxe.release.xcconfig"; path = "Pods/Target Support Files/Pods-RedAxe/Pods-RedAxe.release.xcconfig"; sourceTree = "<group>"; };
+		921BB42C1D65CB5C00C626C7 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		922261801D5A4B82001614BD /* RedAxe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = RedAxe.entitlements; sourceTree = "<group>"; };
 		922261831D5A4EEA001614BD /* CloudKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
 		922261851D5A5A62001614BD /* TopicListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicListViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				924AAF831D5A837000BE6AC4 /* TopicCell.swift */,
+				921BB42C1D65CB5C00C626C7 /* CircleView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				924F8FE01D5A0AF100A87780 /* Themes.swift in Sources */,
 				924F8FDE1D5A0A6E00A87780 /* Topic.swift in Sources */,
 				924F8FC81D59D60C00A87780 /* VoteChanelViewController.swift in Sources */,
+				921BB42D1D65CB5C00C626C7 /* CircleView.swift in Sources */,
 				924AAF841D5A837000BE6AC4 /* TopicCell.swift in Sources */,
 				924F8FD91D5A02B100A87780 /* Statistic.swift in Sources */,
 				92E703441D54BF9A00C94D09 /* Reducers.swift in Sources */,

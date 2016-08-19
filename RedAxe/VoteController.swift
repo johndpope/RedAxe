@@ -12,7 +12,8 @@ import ReSwift
 
 class VoteGraphController: UIViewController, StoreSubscriber {
     var graphView : ScrollableGraphView!
-    
+    var data : [Double]?
+    var labels : [String]?
     override func viewDidLoad() {
         super.viewDidLoad()
         setupGraph()
@@ -34,13 +35,39 @@ class VoteGraphController: UIViewController, StoreSubscriber {
     }
     
     private func mapActiveTopicOnChart(topic : Topic){
+        guard var data = self.data, let labels = self.labels else {
+            fillInitialData(topic)
+            return
+        }
+        
+        if let themes = topic.themes {
+            themes.forEach({
+                guard $0.id != nil else { return }
+                guard data.count > $0.id! else {
+                    fillInitialData(topic)
+                    return
+                }
+                
+                data[$0.id!] = Double($0.rating!)
+            })
+            graphView.dataPointSpacing = view.frame.width / CGFloat(themes.count + 1)
+        }
+
+        graphView.setData(data, withLabels: labels)
+    }
+    
+    func fillInitialData(topic : Topic){
         var data = [Double]()
         var labels = [String]()
         if let themes = topic.themes {
             for theme in themes {
                 data.append(Double(theme.rating!))
-                labels.append(theme.id!.description)
+                labels.append((theme.id! + 1).description)
             }
+            
+            self.data = data
+            self.labels = labels
+            graphView.dataPointSpacing = view.frame.width / CGFloat(themes.count + 1)
         }
         
         graphView.setData(data, withLabels: labels)
@@ -76,6 +103,7 @@ class VoteGraphController: UIViewController, StoreSubscriber {
         graphView.referenceLineLabelColor = UIColor.whiteColor()
         graphView.dataPointLabelColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
 
+        graphView.animationDuration = 0.3
         graphView.shouldAnimateOnStartup = true
         self.view.addSubview(graphView)
  

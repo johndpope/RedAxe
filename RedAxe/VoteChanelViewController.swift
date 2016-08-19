@@ -14,6 +14,11 @@ class VoteChanelViewController: UIViewController, StoreSubscriber {
     var green : CGFloat = 68
     var blue : CGFloat = 68
     
+    @IBOutlet weak var voteUpButton: UIButton!
+    @IBOutlet weak var voteDownButton: UIButton!
+    @IBOutlet weak var voteUpLock: CircleView!
+    @IBOutlet weak var voteDownLock: CircleView!
+    
     @IBOutlet weak var themeActualSegment: UISegmentedControl!
     @IBOutlet weak var topicDescriptionText: UITextView!
     
@@ -39,8 +44,6 @@ class VoteChanelViewController: UIViewController, StoreSubscriber {
         topicTitle.text = activeTopic?.description ?? ""
         topicDescriptionText.text = activeTopic?.description ?? ""
         connectedWithPubNub = state.connectedWithPubNub
-        
-        
     }
     
     override func viewDidLoad() {
@@ -70,19 +73,30 @@ class VoteChanelViewController: UIViewController, StoreSubscriber {
     }
     
     @IBAction func voteUp(sender : UIButton){
-        guard readyForVote else {return}
-        let rating = ratingPicker.selectedRowInComponent(0) + 1
-        mainStore.dispatch(ActionIncrease(rating: rating))
+        vote(sender,lock: voteUpLock, voteUp: true)
     }
     
     @IBAction func voteDown(sender : UIButton){
-        guard readyForVote else {return}
-        let rating = ratingPicker.selectedRowInComponent(0) + 1
-        mainStore.dispatch(ActionDecrease(rating: rating))
+        vote(sender,lock: voteDownLock, voteUp: false)
     }
     
-    private func generateSegmentForEachTheme(status : Int?,themes : [Themes]?){
-        guard let themes = themes, let status = status else { return }
+    func vote(sender : UIButton, lock : CircleView, voteUp : Bool){
+        guard readyForVote else {return}
+        lock.hidden = false
+        sender.enabled = false
+        let rating = ratingPicker.selectedRowInComponent(0) + 1
+        let targetID = themeActualSegment.selectedSegmentIndex
+        let action : Action = voteUp ? ActionIncrease(rating: rating, targetID : targetID) : ActionDecrease(rating: rating, targetID : targetID)
+        mainStore.dispatch(action)
+        
+        lock.animateCircle(2) { [sender , lock] in
+            lock.hidden = true
+            sender.enabled = true
+        }
+    }
+    
+    private func generateSegmentForEachTheme(_status : Int?, themes _themes : [Themes]?){
+        guard let themes = _themes, let status = _status else { return }
         guard status != themeActualSegment.selectedSegmentIndex else { return }
         
         themeActualSegment.removeAllSegments()

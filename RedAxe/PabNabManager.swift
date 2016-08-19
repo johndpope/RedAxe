@@ -39,13 +39,13 @@ class PabNabManager : NSObject, StoreSubscriber {
         }
     }
     
-    func voteUp(toChannel : String,rating : Int){
-        let voteUp = VoteMassage(rating: rating, voteUp: true)
+  func voteUp(toChannel : String,rating : Int, targetID : Int){
+        let voteUp = VoteMassage(rating: rating, voteUp: true, targetID : targetID)
         sendMassage(toChannel,massage: voteUp)
     }
     
-    func voteDown(toChannel : String,rating : Int){
-        let voteDownMesage = VoteMassage(rating: rating, voteUp: false)
+    func voteDown(toChannel : String,rating : Int, targetID : Int){
+        let voteDownMesage = VoteMassage(rating: rating, voteUp: false, targetID : targetID)
         sendMassage(toChannel, massage: voteDownMesage)
     }
     
@@ -84,7 +84,7 @@ extension PabNabManager : PNObjectEventListener {
         }
         if let strMassage = message.data.message as? String {
             if let massage = fromJSONString(strMassage) {
-                mainStore.dispatch(ActionUpdateTopicVoteLevel(rating: massage.rating, vote: massage.voteUp))
+                mainStore.dispatch(ActionUpdateTopicVoteLevel(rating: massage.rating, vote: massage.voteUp, targetID : massage.targetID))
             }
         }
 
@@ -181,16 +181,17 @@ extension PabNabManager : PNObjectEventListener {
 extension PabNabManager {
     func toJSONString(massage : VoteMassage) -> String? {
         let voteNum = massage.voteUp ? 1 : 0
-        return "\(massage.rating)|\(voteNum)"
+        return "\(massage.rating)|\(voteNum)|\(massage.targetID)"
     }
     
     func fromJSONString(jsonString : String) -> VoteMassage? {
         let splitStrings = jsonString.componentsSeparatedByString("|")
-        if splitStrings.count == 2 {
+        if splitStrings.count == 3 {
             let rating = splitStrings[0]
             let voteUp = splitStrings[1] == "1"
-            if let _rating = Int(rating) {
-                return VoteMassage(rating: _rating, voteUp: voteUp)
+            let targetID = splitStrings[2]
+            if let _rating = Int(rating), let _targetID = Int(targetID) {
+                return VoteMassage(rating: _rating, voteUp: voteUp, targetID : _targetID)
             }
         }
         return nil

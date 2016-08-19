@@ -17,8 +17,8 @@ struct AppState: StateType {
     var loading = false
 }
 
-struct ActionIncrease: Action { var rating : Int}
-struct ActionDecrease: Action { var rating : Int}
+struct ActionIncrease: Action { var rating : Int, targetID : Int}
+struct ActionDecrease: Action { var rating : Int, targetID : Int}
 
 struct ActionStatrtUploadHistory: Action {}
 struct ActionDidUploadWithResult: Action { var history : [VoteMassage]? }
@@ -29,7 +29,7 @@ struct ActionDidUploadWithTopicResult: Action { var topic : [Topic]?}
 struct ActionSetActiveTopic: Action { var topic : Topic}
 struct ActionConnectWithPubNub: Action { var succes : Bool}
 
-struct ActionUpdateTopicVoteLevel: Action { var rating : Int, vote : Bool}
+struct ActionUpdateTopicVoteLevel: Action { var rating : Int, vote : Bool, targetID : Int}
 
 struct FirstScreenReducer: Reducer {
     
@@ -41,22 +41,25 @@ struct FirstScreenReducer: Reducer {
             if let status = state.activeTopic?.status {
                 let voteValue = action.vote ? action.rating : -action.rating
                 let rating = state.activeTopic!.themes![status].rating! + voteValue
+                let targetID = action.targetID
                 var appendRating = rating > 50 ? 0 : voteValue
                 appendRating = rating >= 0 ? appendRating : 0
                 
-                state.activeTopic!.themes![status].rating! += appendRating
-                state.activeTopic!.themes![status].votesCount! += 1
-                state.activeTopic!.themes![status].votesLevel! += action.vote ? 1 : -1
+                state.activeTopic!.themes![targetID].rating! += appendRating
+                state.activeTopic!.themes![targetID].votesCount! += 1
+                state.activeTopic!.themes![targetID].votesLevel! += action.vote ? 1 : -1
             }
             break
         case let action as ActionIncrease:
             if let channel = state.activeTopic?.channel {
-                PabNabManager.shared.voteUp(channel, rating: action.rating)
+                state.activeTopic?.status = action.targetID
+                PabNabManager.shared.voteUp(channel, rating: action.rating, targetID: action.targetID)
             }
             break
         case let action as ActionDecrease:
             if let channel = state.activeTopic?.channel {
-                PabNabManager.shared.voteDown(channel, rating: action.rating)
+                state.activeTopic?.status = action.targetID
+                PabNabManager.shared.voteDown(channel, rating: action.rating, targetID: action.targetID)
             }
             break
         case let action as ActionConnectWithPubNub:

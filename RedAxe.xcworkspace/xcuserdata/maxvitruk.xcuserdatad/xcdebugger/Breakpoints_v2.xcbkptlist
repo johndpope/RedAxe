@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RedAxe/VoteController.swift"
-            timestampString = "492518401.820927"
+            timestampString = "493218339.155535"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "newState(_:)"
             landmarkType = "5">
             <Locations>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RedAxe/VoteController.swift"
-            timestampString = "492518401.820927"
+            timestampString = "493218339.155535"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "newState(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RedAxe/VoteChanelViewController.swift"
-            timestampString = "492601433.828901"
+            timestampString = "493216420.299606"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "VoteChanelViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -266,71 +266,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RedAxe/Reducers.swift"
-            timestampString = "492620235.992747"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "handleAction(_:state:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RedAxe/Reducers.swift"
-            timestampString = "492620235.992747"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "handleAction(_:state:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RedAxe/VoteChanelViewController.swift"
-            timestampString = "492601470.524707"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "voteDown(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RedAxe/VoteChanelViewController.swift"
-            timestampString = "492601471.540798"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "voteUp(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RedAxe/Reducers.swift"
-            timestampString = "492620235.992747"
+            timestampString = "493217056.017249"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "59"
@@ -346,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RedAxe/Reducers.swift"
-            timestampString = "492620235.992747"
+            timestampString = "493217056.017249"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "handleAction(_:state:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -359,6 +295,38 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RedAxe/Reducers.swift"
+            timestampString = "493209613.038006"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "handleAction(_:state:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RedAxe/Reducers.swift"
+            timestampString = "492601530.183493"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "handleAction(_:state:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RedAxe/PabNabManager.swift"
@@ -371,14 +339,14 @@
             landmarkType = "5">
             <Locations>
                <Location
-                  shouldBeEnabled = "No"
+                  shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "RedAxe.PabNabManager.sendMassage (Swift.String, massage : RedAxe.VoteMassage) -&gt; ()"
                   moduleName = "RedAxe"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/maxvitruk/Documents/iOS/RedAxe/RedAxe/PabNabManager.swift"
-                  timestampString = "492618147.32698"
+                  timestampString = "493210004.523465"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "33"
@@ -386,14 +354,14 @@
                   offsetFromSymbolStart = "31">
                </Location>
                <Location
-                  shouldBeEnabled = "No"
+                  shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "RedAxe.PabNabManager.sendMassage (Swift.String, massage : RedAxe.VoteMassage) -&gt; ()"
                   moduleName = "RedAxe"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/maxvitruk/Documents/iOS/RedAxe/RedAxe/PabNabManager.swift"
-                  timestampString = "492618147.327085"
+                  timestampString = "493210004.523688"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "33"
@@ -406,15 +374,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RedAxe/PabNabManager.swift"
-            timestampString = "492617043.825421"
+            timestampString = "492612030.983396"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "sendMassage(_:massage:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -422,39 +390,39 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RedAxe/PabNabManager.swift"
-            timestampString = "492617812.293661"
+            timestampString = "492612030.983396"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
-            landmarkName = "toJSONString(_:)"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
+            landmarkName = "client(_:didReceiveStatus:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RedAxe/PabNabManager.swift"
-            timestampString = "492617812.293661"
+            timestampString = "492612030.983396"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "184"
-            endingLineNumber = "184"
-            landmarkName = "toJSONString(_:)"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
+            landmarkName = "client(_:didReceiveStatus:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RedAxe/PabNabManager.swift"
@@ -467,14 +435,14 @@
             landmarkType = "5">
             <Locations>
                <Location
-                  shouldBeEnabled = "No"
+                  shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "RedAxe.PabNabManager.sendMassage (Swift.String, massage : RedAxe.VoteMassage) -&gt; ()"
                   moduleName = "RedAxe"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/maxvitruk/Documents/iOS/RedAxe/RedAxe/PabNabManager.swift"
-                  timestampString = "492618147.329992"
+                  timestampString = "493210004.526846"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "34"
@@ -482,19 +450,83 @@
                   offsetFromSymbolStart = "232">
                </Location>
                <Location
-                  shouldBeEnabled = "No"
+                  shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "RedAxe.PabNabManager.(sendMassage (Swift.String, massage : RedAxe.VoteMassage) -&gt; ()).(closure #1)"
                   moduleName = "RedAxe"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/maxvitruk/Documents/iOS/RedAxe/RedAxe/PabNabManager.swift"
-                  timestampString = "492618147.330104"
+                  timestampString = "493210004.526966"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "35"
                   endingLineNumber = "35"
-                  offsetFromSymbolStart = "19">
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RedAxe/Reducers.swift"
+            timestampString = "493209814.57512"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "handleAction(_:state:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RedAxe/Reducers.swift"
+            timestampString = "493209876.786057"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "handleAction(_:state:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RedAxe.FirstScreenReducer.handleAction (ReSwift.Action, state : Swift.Optional&lt;RedAxe.AppState&gt;) -&gt; RedAxe.AppState"
+                  moduleName = "RedAxe"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maxvitruk/Documents/iOS/RedAxe/RedAxe/Reducers.swift"
+                  timestampString = "493210004.528788"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "979">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RedAxe.FirstScreenReducer.handleAction (ReSwift.Action, state : Swift.Optional&lt;RedAxe.AppState&gt;) -&gt; RedAxe.AppState"
+                  moduleName = "RedAxe"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maxvitruk/Documents/iOS/RedAxe/RedAxe/Reducers.swift"
+                  timestampString = "493210004.528898"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "1172">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -506,12 +538,92 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RedAxe/PabNabManager.swift"
-            timestampString = "492618144.616268"
+            timestampString = "493209912.539449"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "client(_:didReceiveMessage:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RedAxe.PabNabManager.client (__ObjC.PubNub, didReceiveMessage : __ObjC.PNMessageResult) -&gt; ()"
+                  moduleName = "RedAxe"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maxvitruk/Documents/iOS/RedAxe/RedAxe/PabNabManager.swift"
+                  timestampString = "493210004.529651"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "954">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RedAxe.PabNabManager.client (__ObjC.PubNub, didReceiveMessage : __ObjC.PNMessageResult) -&gt; ()"
+                  moduleName = "RedAxe"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maxvitruk/Documents/iOS/RedAxe/RedAxe/PabNabManager.swift"
+                  timestampString = "493210004.529753"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "1045">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RedAxe/PabNabManager.swift"
+            timestampString = "493209925.165205"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
+            landmarkName = "fromJSONString(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RedAxe/PabNabManager.swift"
+            timestampString = "493209963.701358"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "189"
+            endingLineNumber = "189"
+            landmarkName = "fromJSONString(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RedAxe/PabNabManager.swift"
+            timestampString = "493209968.973813"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
+            landmarkName = "fromJSONString(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

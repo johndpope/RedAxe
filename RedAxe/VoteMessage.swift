@@ -9,11 +9,12 @@
 import Foundation
 
 class VoteMassage {
-    init(rating : Int, voteUp : Bool){
+  init(rating : Int, voteUp : Bool, targetID : Int){
         self.rating = rating
         self.voteUp = voteUp
+        self.targetID = targetID
     }
-    
+    var targetID : Int
     var rating : Int
     var voteUp : Bool
 }
