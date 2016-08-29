@@ -8,6 +8,7 @@ target 'RedAxe' do
   pod 'ReSwift'
   pod "PubNub", "~> 4.1"
   pod 'ScrollableGraphView'
+  pod 'ReachabilitySwift'
 end
 
 target 'RedAxeTests' do

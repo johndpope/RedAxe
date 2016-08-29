@@ -14,12 +14,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-RedAxeTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>PubNub.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>ReSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ReachabilitySwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,27 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>18D2F174AAC1503B116CB29BE649F606</key>
+		<key>01C24A711AA7C60C3AD37CA2E347DD30</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3DB658282FB968C32BD2AA8BD36C6BCD</key>
+		<key>0BF25D7507435CA44AC7D2E6025C8EEC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>731B96BDE07FB5640FD3EA930E3BD7B5</key>
+		<key>0FB4D9398973458FDF920E700E5C826C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>260C9860B482E681981077CF9477230E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>27C6243BA4F2E009A7BADA675CBF1858</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>54FCCD84FA2108FA33F6CBC3D08A07E4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>8A2E8FED01C8A6BC8ADFCF3C3B78368F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B0CF81C21FDDDF661AF7F458F3173059</key>
 		<dict>
 			<key>primary</key>
 			<true/>

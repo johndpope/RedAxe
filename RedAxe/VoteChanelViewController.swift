@@ -9,7 +9,7 @@
 import UIKit
 import ReSwift
 
-class VoteChanelViewController: UIViewController, StoreSubscriber {
+class VoteChanelViewController: UIViewController, ReachabilityProtocol, StoreSubscriber {
     var red : CGFloat = 68
     var green : CGFloat = 68
     var blue : CGFloat = 68
@@ -44,6 +44,10 @@ class VoteChanelViewController: UIViewController, StoreSubscriber {
         topicTitle.text = activeTopic?.description ?? ""
         topicDescriptionText.text = activeTopic?.description ?? ""
         connectedWithPubNub = state.connectedWithPubNub
+        
+        if readyForVote {
+           updateConnectionStatus(withSicess: state.connectedWithPubNub)
+        }
     }
     
     override func viewDidLoad() {
@@ -89,7 +93,7 @@ class VoteChanelViewController: UIViewController, StoreSubscriber {
         let action : Action = voteUp ? ActionIncrease(rating: rating, targetID : targetID) : ActionDecrease(rating: rating, targetID : targetID)
         mainStore.dispatch(action)
         
-        lock.animateCircle(2) { [sender , lock] in
+        lock.animateCircle(5) { [sender , lock] in
             lock.hidden = true
             sender.enabled = true
         }

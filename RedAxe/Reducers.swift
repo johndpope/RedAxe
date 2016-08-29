@@ -9,11 +9,14 @@
 import ReSwift
 
 struct AppState: StateType {
+    var reachability  = true
+    var connectedWithPubNub = false
+    
     var availableTopics = [Topic]()
     var statistic = Statistic()
     var activeTopic : Topic?
     var connectionStatus : Int = 0
-    var connectedWithPubNub = false
+    
     var loading = false
 }
 
@@ -28,6 +31,7 @@ struct ActionStatrtUploadTopic: Action {}
 struct ActionDidUploadWithTopicResult: Action { var topic : [Topic]?}
 struct ActionSetActiveTopic: Action { var topic : Topic}
 struct ActionConnectWithPubNub: Action { var succes : Bool}
+struct ActionReachability: Action { var succes : Bool}
 
 struct ActionUpdateTopicVoteLevel: Action { var rating : Int, vote : Bool, targetID : Int}
 
@@ -84,6 +88,9 @@ struct FirstScreenReducer: Reducer {
               state.availableTopics = availTopic
             }
             state.loading = false
+            break
+        case let action as ActionReachability:
+            state.reachability = action.succes
             break
         default:
             break

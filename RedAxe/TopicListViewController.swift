@@ -9,9 +9,10 @@
 import UIKit
 import ReSwift
 
-class TopicListViewController: UITableViewController, StoreSubscriber {
+class TopicListViewController: UITableViewController,ReachabilityProtocol, StoreSubscriber {
     var loadController : UIAlertController?
     var topic = [Topic]()
+    var reachable = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,8 @@ class TopicListViewController: UITableViewController, StoreSubscriber {
     }
     
     func newState(state: AppState) {
+        reachable = state.reachability
+        updateConnectionStatus(withSicess: state.reachability)
         setupTopicList(state.availableTopics)
         presentLoadingView(state.loading)
     }
@@ -79,8 +82,10 @@ class TopicListViewController: UITableViewController, StoreSubscriber {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        mainStore.dispatch(ActionSetActiveTopic(topic: topic[indexPath.row]))
-        self.performSegueWithIdentifier("SegueGoVoteController", sender: nil)
+        if reachable {
+            mainStore.dispatch(ActionSetActiveTopic(topic: topic[indexPath.row]))
+            self.performSegueWithIdentifier("SegueGoVoteController", sender: nil)
+        }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

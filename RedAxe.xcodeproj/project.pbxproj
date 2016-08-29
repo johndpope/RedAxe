@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0405AD4B9F210C8EDB2FCF13 /* Pods_RedAxe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15FDB43F477E8DC77614F941 /* Pods_RedAxe.framework */; };
 		921BB42D1D65CB5C00C626C7 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921BB42C1D65CB5C00C626C7 /* CircleView.swift */; };
 		922261841D5A4EEA001614BD /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922261831D5A4EEA001614BD /* CloudKitManager.swift */; };
 		922261861D5A5A62001614BD /* TopicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922261851D5A5A62001614BD /* TopicListViewController.swift */; };
@@ -29,7 +28,11 @@
 		924F8FDE1D5A0A6E00A87780 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F8FDD1D5A0A6E00A87780 /* Topic.swift */; };
 		924F8FE01D5A0AF100A87780 /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F8FDF1D5A0AF100A87780 /* Themes.swift */; };
 		925132F21D5C82CA0023B5DC /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925132F11D5C82CA0023B5DC /* CloudKit.framework */; };
+		9255570D1D74350F006F0773 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9255570C1D74350F006F0773 /* Reachability.swift */; };
+		9255570F1D743706006F0773 /* ReachabilityProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9255570E1D743706006F0773 /* ReachabilityProtocol.swift */; };
 		92E703441D54BF9A00C94D09 /* Reducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E703431D54BF9A00C94D09 /* Reducers.swift */; };
+		A0E15CE30877445358625013 /* Pods_RedAxeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49583AE01E6B8188BF3FC03C /* Pods_RedAxeTests.framework */; };
+		DCE92117B8281B28131571BB /* Pods_RedAxe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EB8F3389BA3FEE463983B0F /* Pods_RedAxe.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		15FDB43F477E8DC77614F941 /* Pods_RedAxe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RedAxe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		847AC53C56FACCA7997654E6 /* Pods-RedAxe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedAxe.release.xcconfig"; path = "Pods/Target Support Files/Pods-RedAxe/Pods-RedAxe.release.xcconfig"; sourceTree = "<group>"; };
+		0EB8F3389BA3FEE463983B0F /* Pods_RedAxe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RedAxe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36BAEBB8F57870315DDF5070 /* Pods-RedAxeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedAxeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RedAxeTests/Pods-RedAxeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		49583AE01E6B8188BF3FC03C /* Pods_RedAxeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RedAxeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69DA4D5CC2F7FF7C905B87D3 /* Pods-RedAxe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedAxe.release.xcconfig"; path = "Pods/Target Support Files/Pods-RedAxe/Pods-RedAxe.release.xcconfig"; sourceTree = "<group>"; };
 		921BB42C1D65CB5C00C626C7 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		922261801D5A4B82001614BD /* RedAxe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = RedAxe.entitlements; sourceTree = "<group>"; };
 		922261831D5A4EEA001614BD /* CloudKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
@@ -71,8 +76,11 @@
 		924F8FDD1D5A0A6E00A87780 /* Topic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		924F8FDF1D5A0AF100A87780 /* Themes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
 		925132F11D5C82CA0023B5DC /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		9255570C1D74350F006F0773 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		9255570E1D743706006F0773 /* ReachabilityProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityProtocol.swift; sourceTree = "<group>"; };
 		92E703431D54BF9A00C94D09 /* Reducers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reducers.swift; sourceTree = "<group>"; };
-		E05F37D1643EB73AEFD10B17 /* Pods-RedAxe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedAxe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RedAxe/Pods-RedAxe.debug.xcconfig"; sourceTree = "<group>"; };
+		9A9DBF1DB6BA8FC14E349543 /* Pods-RedAxeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedAxeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RedAxeTests/Pods-RedAxeTests.release.xcconfig"; sourceTree = "<group>"; };
+		CC4095B744761E96CA3C1C7F /* Pods-RedAxe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedAxe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RedAxe/Pods-RedAxe.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +88,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0405AD4B9F210C8EDB2FCF13 /* Pods_RedAxe.framework in Frameworks */,
 				925132F21D5C82CA0023B5DC /* CloudKit.framework in Frameworks */,
+				DCE92117B8281B28131571BB /* Pods_RedAxe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,20 +97,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0E15CE30877445358625013 /* Pods_RedAxeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FFD882C8E45F38AE4859C78 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CC4095B744761E96CA3C1C7F /* Pods-RedAxe.debug.xcconfig */,
+				69DA4D5CC2F7FF7C905B87D3 /* Pods-RedAxe.release.xcconfig */,
+				36BAEBB8F57870315DDF5070 /* Pods-RedAxeTests.debug.xcconfig */,
+				9A9DBF1DB6BA8FC14E349543 /* Pods-RedAxeTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		922B9F791D53C443004FF1B6 = {
 			isa = PBXGroup;
 			children = (
 				922B9F841D53C443004FF1B6 /* RedAxe */,
 				922B9F991D53C444004FF1B6 /* RedAxeTests */,
 				922B9F831D53C443004FF1B6 /* Products */,
-				B9D2454B3CFBC7E320FB07CF /* Pods */,
 				DBFD5DD84070D976B8BC71E1 /* Frameworks */,
+				1FFD882C8E45F38AE4859C78 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,6 +184,8 @@
 			children = (
 				924F8FD71D5A029800A87780 /* Statistic */,
 				922261831D5A4EEA001614BD /* CloudKitManager.swift */,
+				9255570C1D74350F006F0773 /* Reachability.swift */,
+				9255570E1D743706006F0773 /* ReachabilityProtocol.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -225,20 +247,12 @@
 			name = Reducer;
 			sourceTree = "<group>";
 		};
-		B9D2454B3CFBC7E320FB07CF /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E05F37D1643EB73AEFD10B17 /* Pods-RedAxe.debug.xcconfig */,
-				847AC53C56FACCA7997654E6 /* Pods-RedAxe.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		DBFD5DD84070D976B8BC71E1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				925132F11D5C82CA0023B5DC /* CloudKit.framework */,
-				15FDB43F477E8DC77614F941 /* Pods_RedAxe.framework */,
+				0EB8F3389BA3FEE463983B0F /* Pods_RedAxe.framework */,
+				49583AE01E6B8188BF3FC03C /* Pods_RedAxeTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -250,12 +264,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 922B9F9F1D53C444004FF1B6 /* Build configuration list for PBXNativeTarget "RedAxe" */;
 			buildPhases = (
-				1055021FED98E7380E1BBDCD /* Check Pods Manifest.lock */,
+				6A88ADDDD0579877946DE319 /* [CP] Check Pods Manifest.lock */,
 				922B9F7E1D53C443004FF1B6 /* Sources */,
 				922B9F7F1D53C443004FF1B6 /* Frameworks */,
 				922B9F801D53C443004FF1B6 /* Resources */,
-				461D40C7611F220042E68992 /* Embed Pods Frameworks */,
-				EB99B2860874D93CF396637D /* Copy Pods Resources */,
+				3A5B0B03E565B077F08B74FE /* [CP] Embed Pods Frameworks */,
+				4CE68573947F245AC9CA9467 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,9 +284,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 922B9FA21D53C444004FF1B6 /* Build configuration list for PBXNativeTarget "RedAxeTests" */;
 			buildPhases = (
+				303E3838699E7858B95F2B05 /* [CP] Check Pods Manifest.lock */,
 				922B9F921D53C444004FF1B6 /* Sources */,
 				922B9F931D53C444004FF1B6 /* Frameworks */,
 				922B9F941D53C444004FF1B6 /* Resources */,
+				CE738CACAEE4290B87D76BC8 /* [CP] Embed Pods Frameworks */,
+				2EBDA4F4887B3D4DB7BD2D90 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -349,14 +366,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1055021FED98E7380E1BBDCD /* Check Pods Manifest.lock */ = {
+		2EBDA4F4887B3D4DB7BD2D90 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RedAxeTests/Pods-RedAxeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		303E3838699E7858B95F2B05 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,14 +396,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		461D40C7611F220042E68992 /* Embed Pods Frameworks */ = {
+		3A5B0B03E565B077F08B74FE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,19 +411,49 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RedAxe/Pods-RedAxe-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EB99B2860874D93CF396637D /* Copy Pods Resources */ = {
+		4CE68573947F245AC9CA9467 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RedAxe/Pods-RedAxe-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A88ADDDD0579877946DE319 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CE738CACAEE4290B87D76BC8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RedAxeTests/Pods-RedAxeTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -414,7 +476,9 @@
 				924F8FC81D59D60C00A87780 /* VoteChanelViewController.swift in Sources */,
 				921BB42D1D65CB5C00C626C7 /* CircleView.swift in Sources */,
 				924AAF841D5A837000BE6AC4 /* TopicCell.swift in Sources */,
+				9255570F1D743706006F0773 /* ReachabilityProtocol.swift in Sources */,
 				924F8FD91D5A02B100A87780 /* Statistic.swift in Sources */,
+				9255570D1D74350F006F0773 /* Reachability.swift in Sources */,
 				92E703441D54BF9A00C94D09 /* Reducers.swift in Sources */,
 				924F8FCC1D59EAE100A87780 /* Constants.swift in Sources */,
 				922261841D5A4EEA001614BD /* CloudKitManager.swift in Sources */,
@@ -544,7 +608,7 @@
 		};
 		922B9FA01D53C444004FF1B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E05F37D1643EB73AEFD10B17 /* Pods-RedAxe.debug.xcconfig */;
+			baseConfigurationReference = CC4095B744761E96CA3C1C7F /* Pods-RedAxe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = RedAxe/RedAxe.entitlements;
@@ -560,7 +624,7 @@
 		};
 		922B9FA11D53C444004FF1B6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 847AC53C56FACCA7997654E6 /* Pods-RedAxe.release.xcconfig */;
+			baseConfigurationReference = 69DA4D5CC2F7FF7C905B87D3 /* Pods-RedAxe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = RedAxe/RedAxe.entitlements;
@@ -576,6 +640,7 @@
 		};
 		922B9FA31D53C444004FF1B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36BAEBB8F57870315DDF5070 /* Pods-RedAxeTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = RedAxeTests/Info.plist;
@@ -588,6 +653,7 @@
 		};
 		922B9FA41D53C444004FF1B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A9DBF1DB6BA8FC14E349543 /* Pods-RedAxeTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = RedAxeTests/Info.plist;
