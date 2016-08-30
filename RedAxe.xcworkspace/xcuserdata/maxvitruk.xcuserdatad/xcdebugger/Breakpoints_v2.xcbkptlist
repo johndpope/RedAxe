@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RedAxe/VoteChanelViewController.swift"
-            timestampString = "494162344.318685"
+            timestampString = "494242493.399825"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "VoteChanelViewController"
             landmarkType = "3">
          </BreakpointContent>

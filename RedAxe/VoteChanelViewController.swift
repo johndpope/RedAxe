@@ -77,25 +77,31 @@ class VoteChanelViewController: UIViewController, ReachabilityProtocol, StoreSub
     }
     
     @IBAction func voteUp(sender : UIButton){
-        vote(sender,lock: voteUpLock, voteUp: true)
+        vote(voteUpLock, voteUp: true)
     }
     
     @IBAction func voteDown(sender : UIButton){
-        vote(sender,lock: voteDownLock, voteUp: false)
+        vote(voteDownLock, voteUp: false)
     }
     
-    func vote(sender : UIButton, lock : CircleView, voteUp : Bool){
+    func vote(lock : CircleView, voteUp : Bool){
         guard readyForVote else {return}
         lock.hidden = false
-        sender.enabled = false
+        
+        voteUpButton.enabled = false
+        voteDownButton.enabled = false
+        
         let rating = ratingPicker.selectedRowInComponent(0) + 1
         let targetID = themeActualSegment.selectedSegmentIndex
         let action : Action = voteUp ? ActionIncrease(rating: rating, targetID : targetID) : ActionDecrease(rating: rating, targetID : targetID)
+        
         mainStore.dispatch(action)
         
-        lock.animateCircle(5) { [sender , lock] in
+        lock.animateCircle(4) { [weak self, lock] in
             lock.hidden = true
-            sender.enabled = true
+            guard let this = self else {return}
+            this.voteUpButton.enabled = true
+            this.voteDownButton.enabled = true
         }
     }
     
