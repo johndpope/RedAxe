@@ -9,6 +9,7 @@ target 'RedAxe' do
   pod "PubNub", "~> 4.1"
   pod 'ScrollableGraphView'
   pod 'ReachabilitySwift'
+  pod 'Gifu'
 end
 
 target 'RedAxeTests' do

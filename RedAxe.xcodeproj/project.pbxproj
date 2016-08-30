@@ -30,6 +30,9 @@
 		925132F21D5C82CA0023B5DC /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925132F11D5C82CA0023B5DC /* CloudKit.framework */; };
 		9255570D1D74350F006F0773 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9255570C1D74350F006F0773 /* Reachability.swift */; };
 		9255570F1D743706006F0773 /* ReachabilityProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9255570E1D743706006F0773 /* ReachabilityProtocol.swift */; };
+		9269DE171D757717009FDBAC /* PageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9269DE161D757717009FDBAC /* PageController.swift */; };
+		9269DE191D758640009FDBAC /* timetravel.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9269DE181D758640009FDBAC /* timetravel.gif */; };
+		9269DE1B1D758737009FDBAC /* GifViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9269DE1A1D758737009FDBAC /* GifViewController.swift */; };
 		92E703441D54BF9A00C94D09 /* Reducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E703431D54BF9A00C94D09 /* Reducers.swift */; };
 		A0E15CE30877445358625013 /* Pods_RedAxeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49583AE01E6B8188BF3FC03C /* Pods_RedAxeTests.framework */; };
 		DCE92117B8281B28131571BB /* Pods_RedAxe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EB8F3389BA3FEE463983B0F /* Pods_RedAxe.framework */; };
@@ -78,6 +81,9 @@
 		925132F11D5C82CA0023B5DC /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		9255570C1D74350F006F0773 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		9255570E1D743706006F0773 /* ReachabilityProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityProtocol.swift; sourceTree = "<group>"; };
+		9269DE161D757717009FDBAC /* PageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageController.swift; sourceTree = "<group>"; };
+		9269DE181D758640009FDBAC /* timetravel.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = timetravel.gif; sourceTree = "<group>"; };
+		9269DE1A1D758737009FDBAC /* GifViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifViewController.swift; sourceTree = "<group>"; };
 		92E703431D54BF9A00C94D09 /* Reducers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reducers.swift; sourceTree = "<group>"; };
 		9A9DBF1DB6BA8FC14E349543 /* Pods-RedAxeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedAxeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RedAxeTests/Pods-RedAxeTests.release.xcconfig"; sourceTree = "<group>"; };
 		CC4095B744761E96CA3C1C7F /* Pods-RedAxe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedAxe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RedAxe/Pods-RedAxe.debug.xcconfig"; sourceTree = "<group>"; };
@@ -220,6 +226,8 @@
 		92E7033D1D54BB4100C94D09 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9269DE1A1D758737009FDBAC /* GifViewController.swift */,
+				9269DE161D757717009FDBAC /* PageController.swift */,
 				922B9F871D53C443004FF1B6 /* ViewController.swift */,
 				924F8FD01D59EEF500A87780 /* VoteController.swift */,
 				922261851D5A5A62001614BD /* TopicListViewController.swift */,
@@ -231,6 +239,7 @@
 		92E7033F1D54BB7D00C94D09 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9269DE181D758640009FDBAC /* timetravel.gif */,
 				922B9F891D53C443004FF1B6 /* Main.storyboard */,
 				922B9F8C1D53C443004FF1B6 /* Assets.xcassets */,
 				922B9F8E1D53C443004FF1B6 /* LaunchScreen.storyboard */,
@@ -353,6 +362,7 @@
 				922B9F901D53C443004FF1B6 /* LaunchScreen.storyboard in Resources */,
 				922B9F8D1D53C443004FF1B6 /* Assets.xcassets in Resources */,
 				922B9F8B1D53C443004FF1B6 /* Main.storyboard in Resources */,
+				9269DE191D758640009FDBAC /* timetravel.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +477,7 @@
 				924F8FDB1D5A07A100A87780 /* PabNabManager.swift in Sources */,
 				922261861D5A5A62001614BD /* TopicListViewController.swift in Sources */,
 				924F8FD61D59F27500A87780 /* RoundedButton.swift in Sources */,
+				9269DE171D757717009FDBAC /* PageController.swift in Sources */,
 				924F8FD11D59EEF500A87780 /* VoteController.swift in Sources */,
 				922B9F861D53C443004FF1B6 /* AppDelegate.swift in Sources */,
 				924F8FCF1D59ED5B00A87780 /* VoteMessage.swift in Sources */,
@@ -475,6 +486,7 @@
 				924F8FDE1D5A0A6E00A87780 /* Topic.swift in Sources */,
 				924F8FC81D59D60C00A87780 /* VoteChanelViewController.swift in Sources */,
 				921BB42D1D65CB5C00C626C7 /* CircleView.swift in Sources */,
+				9269DE1B1D758737009FDBAC /* GifViewController.swift in Sources */,
 				924AAF841D5A837000BE6AC4 /* TopicCell.swift in Sources */,
 				9255570F1D743706006F0773 /* ReachabilityProtocol.swift in Sources */,
 				924F8FD91D5A02B100A87780 /* Statistic.swift in Sources */,

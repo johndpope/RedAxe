@@ -85,6 +85,7 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/CocoaLumberjack/CocoaLumberjack.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Gifu/Gifu.framework"
   install_framework "$BUILT_PRODUCTS_DIR/PubNub/PubNub.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ReSwift/ReSwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ReachabilitySwift/ReachabilitySwift.framework"
@@ -92,6 +93,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/CocoaLumberjack/CocoaLumberjack.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Gifu/Gifu.framework"
   install_framework "$BUILT_PRODUCTS_DIR/PubNub/PubNub.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ReSwift/ReSwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ReachabilitySwift/ReachabilitySwift.framework"

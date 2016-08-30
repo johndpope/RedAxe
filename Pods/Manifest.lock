@@ -7,6 +7,7 @@ PODS:
     - CocoaLumberjack/Core
   - CocoaLumberjack/Extensions (2.3.0):
     - CocoaLumberjack/Default
+  - Gifu (1.2.1)
   - PubNub (4.4.1):
     - CocoaLumberjack (= 2.3.0)
     - PubNub/Core (= 4.4.1)
@@ -17,6 +18,7 @@ PODS:
   - ScrollableGraphView (2.0.0)
 
 DEPENDENCIES:
+  - Gifu
   - PubNub (~> 4.1)
   - ReachabilitySwift
   - ReSwift
@@ -24,11 +26,12 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
+  Gifu: 0eab1ca24a4adbd949338bcb71a8556748cb2d28
   PubNub: 7c59158178877fed5004df938cd31d030856f54e
   ReachabilitySwift: e0f6b6f280effb47731acfaaa2d5ffe223703793
   ReSwift: 7abc536a87955c34bf60de3fd32ce9a02ee3ad87
   ScrollableGraphView: b91f73335220890103a43a33d9fb8d93c547a86d
 
-PODFILE CHECKSUM: 4f5c661d928c57cb4b5b9e0692419be751e3eb79
+PODFILE CHECKSUM: 8b412297ca67844667f5a26d949590759490ff40
 
 COCOAPODS: 1.0.1

@@ -10,6 +10,14 @@ import UIKit
 import ReSwift
 
 class ViewController: UIViewController, StoreSubscriber {
+    
+    @IBOutlet weak var pageControl : UIPageControl!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "REDAXE"
+    }
+    
     override func viewWillAppear(animated: Bool) {
         mainStore.subscribe(self)
         updateBackroundColor()
@@ -20,10 +28,11 @@ class ViewController: UIViewController, StoreSubscriber {
     }
     
     func newState(state: AppState) {
+        pageControl.currentPage = state.pageIndex
     }
     
     func updateBackroundColor(){
-        UIView.animateWithDuration(1.0) {
+        UIView.animateWithDuration(2) {
             self.view.backgroundColor = UIColor.whiteColor()
         }
     }

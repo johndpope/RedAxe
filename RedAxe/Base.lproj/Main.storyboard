@@ -3,13 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Page View Controller-->
+        <!--Page Controller-->
         <scene sceneID="t5r-3W-MM0">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="aY4-bH-LvC" sceneMemberID="viewController">
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="aY4-bH-LvC" customClass="PageController" customModule="RedAxe" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tII-wl-iIQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -58,9 +59,14 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t8l-Bi-Oke">
                                 <rect key="frame" x="-4" y="64" width="383" height="442"/>
                                 <connections>
-                                    <segue destination="aY4-bH-LvC" kind="embed" id="5cC-VN-AlY"/>
+                                    <segue destination="aY4-bH-LvC" kind="embed" identifier="SetupPageController" id="5cC-VN-AlY"/>
                                 </connections>
                             </containerView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Xar-QE-wc6">
+                                <rect key="frame" x="168" y="502" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.61606749240000003" green="0.0" blue="0.1046640594" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="0.31764705879999999" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -69,11 +75,16 @@
                             <constraint firstItem="t8l-Bi-Oke" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="XV0-IX-mNi"/>
                             <constraint firstItem="t8l-Bi-Oke" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="bgt-n2-ZJB"/>
                             <constraint firstItem="AMR-AM-r04" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gX1-i3-79P"/>
+                            <constraint firstItem="Xar-QE-wc6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hcQ-Qb-iHw"/>
+                            <constraint firstItem="Xar-QE-wc6" firstAttribute="top" secondItem="t8l-Bi-Oke" secondAttribute="bottom" constant="-4" id="uZb-4S-LHg"/>
                             <constraint firstItem="AMR-AM-r04" firstAttribute="top" secondItem="t8l-Bi-Oke" secondAttribute="bottom" constant="41" id="yw7-bF-hhZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nNb-YX-C7a"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="pageControl" destination="Xar-QE-wc6" id="hFf-7d-E98"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -414,6 +425,267 @@
             </objects>
             <point key="canvasLocation" x="760.5" y="500.5"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="dq1-6N-yao">
+            <objects>
+                <viewController storyboardIdentifier="OneViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WzA-sU-V4B" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lqb-l5-i3K"/>
+                        <viewControllerLayoutGuide type="bottom" id="hYU-Qg-NXH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hS2-ij-6R1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nS5-st-90N">
+                                <rect key="frame" x="162" y="28" width="52" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="cwq-do-y2n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <color key="textColor" red="0.61606749240000003" green="0.0" blue="0.1046640594" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pih-IP-vve">
+                                <rect key="frame" x="28" y="57" width="320" height="590"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="ReSwift relies on a few principles:">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" • ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.7686274509803922" green="0.10196078431372549" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="11" name="Menlo-Regular"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="The Store">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> stores your entire app state in the form of a single data structure. This state can only be modified by dispatching Actions to the store.Whenever the state in the store changes, the store will notify all observers.
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" • ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.7686274509803922" green="0.10196078431372549" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="11" name="Menlo-Regular"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Actions">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> are a declarative way of describing a state change. Actions don't contain any code, they are consumed by the store and forwarded to reducers. Reducers will handle the actions by implementing a different state change for each action.
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" • ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.7686274509803922" green="0.10196078431372549" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="11" name="Menlo-Regular"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Reducers ">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="provide pure functions, that based on the current action and the current app state, create a new app state">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pih-IP-vve" firstAttribute="top" secondItem="nS5-st-90N" secondAttribute="bottom" constant="8" symbolic="YES" id="DcH-R5-X7S"/>
+                            <constraint firstAttribute="bottom" secondItem="pih-IP-vve" secondAttribute="bottom" constant="20" symbolic="YES" id="Lyx-y9-F5R"/>
+                            <constraint firstItem="nS5-st-90N" firstAttribute="centerX" secondItem="hS2-ij-6R1" secondAttribute="centerX" id="SoY-YI-Yxc"/>
+                            <constraint firstItem="pih-IP-vve" firstAttribute="centerX" secondItem="nS5-st-90N" secondAttribute="centerX" id="T6A-EE-qnY"/>
+                            <constraint firstItem="nS5-st-90N" firstAttribute="top" secondItem="lqb-l5-i3K" secondAttribute="bottom" constant="8" symbolic="YES" id="X2C-qs-4bb"/>
+                            <constraint firstItem="pih-IP-vve" firstAttribute="leading" secondItem="hS2-ij-6R1" secondAttribute="leadingMargin" constant="12" id="chW-TB-qN9"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I5g-BB-7wJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="760.5" y="1272.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qeH-ev-6YF">
+            <objects>
+                <viewController storyboardIdentifier="TwoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="85j-4R-946" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pb4-tL-5eZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="8YA-uE-Gaz"/>
+                    </layoutGuides>
+                    <view key="view" clipsSubviews="YES" tag="1" contentMode="scaleToFill" id="g63-FM-nrd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reswift_concept" translatesAutoresizingMaskIntoConstraints="NO" id="7hq-Vn-qS7">
+                                <rect key="frame" x="0.0" y="205" width="375" height="258"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7hq-Vn-qS7" secondAttribute="height" multiplier="125:86" id="AzF-zd-8q7"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Concept" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kep-6S-qim">
+                                <rect key="frame" x="152" y="28" width="72" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="b19-6a-7Ai"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <color key="textColor" red="0.61606749240000003" green="0.0" blue="0.1046640594" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="7hq-Vn-qS7" secondAttribute="trailing" id="67U-Yp-Ju0"/>
+                            <constraint firstItem="7hq-Vn-qS7" firstAttribute="centerY" secondItem="g63-FM-nrd" secondAttribute="centerY" id="Sz3-Lr-rrv"/>
+                            <constraint firstItem="Kep-6S-qim" firstAttribute="centerX" secondItem="7hq-Vn-qS7" secondAttribute="centerX" id="kVX-EB-qo5"/>
+                            <constraint firstItem="Kep-6S-qim" firstAttribute="top" secondItem="Pb4-tL-5eZ" secondAttribute="bottom" constant="8" symbolic="YES" id="lxQ-5c-Hl7"/>
+                            <constraint firstItem="7hq-Vn-qS7" firstAttribute="leading" secondItem="g63-FM-nrd" secondAttribute="leading" id="pLP-o5-BUO"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QX4-AS-Yxy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1208.5" y="1272.5"/>
+        </scene>
+        <!--Gif View Controller-->
+        <scene sceneID="cmj-kp-FQc">
+            <objects>
+                <viewController storyboardIdentifier="ThreeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EsE-UB-QYo" customClass="GifViewController" customModule="RedAxe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rpa-QA-ZDX"/>
+                        <viewControllerLayoutGuide type="bottom" id="8om-op-9It"/>
+                    </layoutGuides>
+                    <view key="view" tag="2" contentMode="scaleToFill" id="XPR-pJ-8li">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jej-c7-ihu" customClass="AnimatableImageView" customModule="Gifu">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jej-c7-ihu" firstAttribute="top" secondItem="Rpa-QA-ZDX" secondAttribute="bottom" constant="-20" id="6xO-Xj-f88"/>
+                            <constraint firstItem="jej-c7-ihu" firstAttribute="centerY" secondItem="XPR-pJ-8li" secondAttribute="centerY" id="dHb-O5-b9i"/>
+                            <constraint firstItem="jej-c7-ihu" firstAttribute="centerX" secondItem="XPR-pJ-8li" secondAttribute="centerX" id="wGb-oc-SoI"/>
+                            <constraint firstItem="jej-c7-ihu" firstAttribute="leading" secondItem="XPR-pJ-8li" secondAttribute="leadingMargin" constant="-20" id="wde-cl-3hN"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="imageView" destination="jej-c7-ihu" id="bhi-aR-qYN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7rj-r5-ySs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1616.5" y="1272.5"/>
+        </scene>
         <!--Vote Graph Controller-->
         <scene sceneID="Q48-hA-gCX">
             <objects>
@@ -433,4 +705,7 @@
             <point key="canvasLocation" x="2029.5" y="-8"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="reswift_concept" width="2000" height="943"/>
+    </resources>
 </document>

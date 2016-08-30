@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Gifu.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-RedAxe.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,17 +47,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>01C24A711AA7C60C3AD37CA2E347DD30</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>0BF25D7507435CA44AC7D2E6025C8EEC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>0FB4D9398973458FDF920E700E5C826C</key>
+		<key>0C8FAD2805C50D7037E7C082D3A5014F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,17 +57,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>27C6243BA4F2E009A7BADA675CBF1858</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>54FCCD84FA2108FA33F6CBC3D08A07E4</key>
+		<key>27291E4291418A145473561005085065</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>8A2E8FED01C8A6BC8ADFCF3C3B78368F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A6518E821A9E1909470EFDE34313CD53</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A67A3D30EA58C9E3F87CCF0918F730CD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C02F5FBC454BC6CEEE62E4C428973068</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F9FAE0FF45A47874C8AEEB404C1EB885</key>
 		<dict>
 			<key>primary</key>
 			<true/>

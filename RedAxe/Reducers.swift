@@ -9,6 +9,7 @@
 import ReSwift
 
 struct AppState: StateType {
+    var pageIndex = 0
     var reachability  = true
     var connectedWithPubNub = false
     
@@ -30,8 +31,11 @@ struct ActionDidConnect: Action { var vote : VoteMassage }
 struct ActionStatrtUploadTopic: Action {}
 struct ActionDidUploadWithTopicResult: Action { var topic : [Topic]?}
 struct ActionSetActiveTopic: Action { var topic : Topic}
+//Reachability
 struct ActionConnectWithPubNub: Action { var succes : Bool}
 struct ActionReachability: Action { var succes : Bool}
+//Page index
+struct ActionDidChangePageIndex: Action { var index : Int}
 
 struct ActionUpdateTopicVoteLevel: Action { var rating : Int, vote : Bool, targetID : Int}
 
@@ -91,6 +95,9 @@ struct FirstScreenReducer: Reducer {
             break
         case let action as ActionReachability:
             state.reachability = action.succes
+            break
+        case let action as ActionDidChangePageIndex:
+            state.pageIndex = action.index
             break
         default:
             break
